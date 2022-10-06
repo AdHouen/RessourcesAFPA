@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE doc SYSTEM "mailing-list_2.dtd">
+<?xml-stylesheet type="text/xsl" href="transformation_html.xsl"?>
+<mailing-list>
+	<adresse>
+		<nom>PierreEm</nom>
+		<email statut="perso">gromammifere@gmail.com</email>
+		<email statut="prof">pevwork@gmail.com</email>
+	</adresse>
+	<adresse>
+		<nom>xavier</nom>
+		<email statut="perso">x17@orange.fr</email>
+	</adresse>
+</mailing-list>

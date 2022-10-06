@@ -1,0 +1,196 @@
+Microsoft Windows [version 10.0.17134.345]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>cd %temp%
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>c:
+
+C:\Users\xher\AppData\Local\Temp>
+C:\Users\xher\AppData\Local\Temp>dir r5
+ Le volume dans le lecteur C s’appelle SYSTEM
+ Le numéro de série du volume est 5CD9-5C81
+
+ Répertoire de C:\Users\xher\AppData\Local\Temp\r5
+
+07/11/2018  15:35    <DIR>          .
+07/11/2018  15:35    <DIR>          ..
+               0 fichier(s)                0 octets
+               2 Rép(s)  152 885 161 984 octets libres
+
+C:\Users\xher\AppData\Local\Temp>dir f*
+ Le volume dans le lecteur C s’appelle SYSTEM
+ Le numéro de série du volume est 5CD9-5C81
+
+ Répertoire de C:\Users\xher\AppData\Local\Temp
+
+07/11/2018  15:36                 0 f2
+07/11/2018  15:36                 0 fichier1
+07/11/2018  08:30    <DIR>          fz3temp-2
+               2 fichier(s)                0 octets
+               1 Rép(s)  152 885 030 912 octets libres
+
+C:\Users\xher\AppData\Local\Temp>cd %TP_HOME%
+
+C:\Users\xher\AppData\Local\Temp>d:
+
+D:\TP_DOS>
+D:\TP_DOS>path
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Program Files ....
+
+D:\TP_DOS>7z
+
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+
+Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...]
+       [<@listfiles...>]
+
+<Commands>
+  a: Add files to archive
+  b: Benchmark
+  d: Delete files from archive
+  e: Extract files from archive (without using directory names)
+  l: List contents of archive
+  t: Test integrity of archive
+  u: Update files to archive
+  x: eXtract files with full paths
+<Switches>
+  -ai[r[-|0]]{@listfile|!wildcard}: Include archives
+  -ax[r[-|0]]{@listfile|!wildcard}: eXclude archives
+  -bd: Disable percentage indicator
+  -i[r[-|0]]{@listfile|!wildcard}: Include filenames
+  -m{Parameters}: set compression Method
+  -o{Directory}: set Output directory
+  -p{Password}: set Password
+  -r[-|0]: Recurse subdirectories
+  -scs{UTF-8 | WIN | DOS}: set charset for list files
+  -sfx[{name}]: Create SFX archive
+  -si[{name}]: read data from stdin
+  -slt: show technical information for l (List) command
+  -so: write data to stdout
+  -ssc[-]: set sensitive case mode
+  -ssw: compress shared files
+  -t{Type}: Set type of archive
+  -u[-][p#][q#][r#][x#][y#][z#][!newArchiveName]: Update options
+  -v{Size}[b|k|m|g]: Create volumes
+  -w[{path}]: assign Work directory. Empty path means a temporary directory
+  -x[r[-|0]]]{@listfile|!wildcard}: eXclude filenames
+  -y: assume Yes on all queries
+
+D:\TP_DOS>
+D:\TP_DOS>cd repertoire1
+
+D:\TP_DOS\repertoire1>7z a archive2.zip *
+
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+Scanning
+
+Creating archive archive2.zip
+
+Compressing  f2
+Compressing  fichier1
+Compressing  repertoire1.zip
+
+Everything is Ok
+
+D:\TP_DOS\repertoire1>dir
+ Le volume dans le lecteur D s’appelle data
+ Le numéro de série du volume est ACB6-1A36
+
+ Répertoire de D:\TP_DOS\repertoire1
+
+07/11/2018  15:46    <DIR>          .
+07/11/2018  15:46    <DIR>          ..
+07/11/2018  15:46               686 archive2.zip
+07/11/2018  15:36                 0 f2
+07/11/2018  15:36                 0 fichier1
+07/11/2018  15:35    <DIR>          r5
+07/11/2018  15:37               384 repertoire1.zip
+               4 fichier(s)            1 070 octets
+               3 Rép(s)  19 039 567 872 octets libres
+
+D:\TP_DOS\repertoire1>7z l archive2.zip
+
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+
+Listing archive: archive2.zip
+
+--
+Path = archive2.zip
+Type = zip
+Physical Size = 686
+
+   Date      Time    Attr         Size   Compressed  Name
+------------------- ----- ------------ ------------  ------------------------
+2018-11-07 15:36:04 ....A            0            0  f2
+2018-11-07 15:36:04 ....A            0            0  fichier1
+2018-11-07 15:35:50 D....            0            0  r5
+2018-11-07 15:37:42 ....A          384          160  repertoire1.zip
+------------------- ----- ------------ ------------  ------------------------
+                                   384          160  3 files, 1 folders
+
+D:\TP_DOS\repertoire1>7z x archive2.zip %temp%
+
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+
+
+Error:
+Cannot use absolute pathnames for this command
+
+D:\TP_DOS\repertoire1>7z x archive2.zip -o%temp%
+
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+
+Processing archive: archive2.zip
+
+file C:\Users\xher\AppData\Local\Temp\f2
+already exists. Overwrite with
+f2?
+(Y)es / (N)o / (A)lways / (S)kip all / A(u)to rename all / (Q)uit? y
+Extracting  f2
+file C:\Users\xher\AppData\Local\Temp\fichier1
+already exists. Overwrite with
+fichier1?
+(Y)es / (N)o / (A)lways / (S)kip all / A(u)to rename all / (Q)uit? A
+Extracting  fichier1
+Extracting  r5
+Extracting  repertoire1.zip
+
+Everything is Ok
+
+Folders: 1
+Files: 3
+Size:       384
+Compressed: 686
+
+D:\TP_DOS\repertoire1>
+D:\TP_DOS\repertoire1>7z x archive2.zip -o%temp%
+D:\TP_DOS\repertoire1>
+D:\TP_DOS\repertoire1>7z t *.zip
+
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+
+Processing archive: archive2.zip
+
+Testing     f2
+Testing     fichier1
+Testing     r5
+Testing     repertoire1.zip
+
+Everything is Ok
+
+Processing archive: repertoire1.zip
+
+Testing     f2
+Testing     fichier1
+Testing     r5
+
+Everything is Ok
+
+Archives: 2
+Folders: 2
+Files: 5
+Size:       384
+Compressed: 1070
+
+D:\TP_DOS\repertoire1>

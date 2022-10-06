@@ -1,0 +1,6 @@
+<!ELEMENT mailing-list ((adresse)*)>
+<!ELEMENT adresse (nom,(email)*)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email statut (perso|prof) "perso" >
+

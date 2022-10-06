@@ -1,0 +1,14 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>notepad
+
+C:\Users\xav>mspaint
+
+C:\Users\xav>help echo
+Affiche des messages ou active/désactive l’affichage des commandes.
+
+  ECHO [ON | OFF]
+  ECHO [message]
+
+Entrez ECHO sans paramètre pour afficher l’état en cours de la commande.

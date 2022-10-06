@@ -1,0 +1,8 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>ping 10.75.24.117
+
+Envoi d’une requête 'Ping'  10.75.24.117 avec 32 octets de données :
+Réponse de 10.75.24.117 : octets=32 temps=1 ms TTL=128
+Réponse de 10.75.24.117 : octets=32 temps=1 ms TTL=128

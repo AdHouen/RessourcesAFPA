@@ -1,0 +1,81 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+D:\TP_DOS>help copy
+Copie un ou plusieurs fichiers sur un autre emplacement.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B ] source [/A | /B]
+     [+ source [/A | /B] [+ ...]] [cible [/A | /B]]
+......................
+
+D:\TP_DOS>copy con fic7
+azerty
+lkjljklkj
+kjlkjlk
+
+kjlkjlkjlkj^Z^Z
+        1 fichier(s) copié(s).
+
+D:\TP_DOS>type fic7
+azerty
+lkjljklkj
+kjlkjlk
+
+kjlkjlkjlkj
+D:\TP_DOS>c:
+
+C:\>
+C:\>set
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\xav\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=APIXHR6
+ComSpec=C:\WINDOWS\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+HOMEDRIVE=C:
+HOMEPATH=\Users\xav
+.........................
+
+C:\>cd %HOMEPATH%
+
+C:\Users\xav>type null> fic1.txt
+Le fichier spécifié est introuvable.
+
+C:\Users\xav>type nul> fic1.txt
+
+C:\Users\xav>copy nul f1
+        1 fichier(s) copié(s).
+
+C:\Users\xav>
+C:\Users\xav>dir
+ Le volume dans le lecteur C s’appelle OS_SSD
+ Le numéro de série du volume est 1A25-9C31
+
+ Répertoire de C:\Users\xav
+
+16/10/2019  19:48    <DIR>          .
+16/10/2019  19:48    <DIR>          ..
+14/10/2019  12:20    <DIR>          3D Objects
+14/10/2019  12:20    <DIR>          Contacts
+16/10/2019  14:19    <DIR>          Desktop
+14/10/2019  12:20    <DIR>          Documents
+16/10/2019  18:33    <DIR>          Downloads
+16/10/2019  19:48                 0 f1
+14/10/2019  12:20    <DIR>          Favorites
+16/10/2019  19:44                 0 fic1.txt
+16/10/2019  19:43                 3 Filename.txt
+14/10/2019  12:20    <DIR>          Links
+14/10/2019  12:20    <DIR>          Music
+06/10/2019  20:36    <DIR>          OneDrive
+14/10/2019  12:20    <DIR>          Pictures
+14/10/2019  12:20    <DIR>          Saved Games
+14/10/2019  12:20    <DIR>          Searches
+14/10/2019  12:20    <DIR>          Videos
+               3 fichier(s)                3 octets
+              15 Rép(s)  83 329 224 704 octets libres
+
+C:\Users\xav>

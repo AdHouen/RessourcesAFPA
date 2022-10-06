@@ -1,0 +1,186 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+D:\TP_CMD>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;
+
+D:\TP_CMD>mspaint
+
+D:\TP_CMD>mspaint
+'mspaint' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+===============================================
+D:\TP_CMD>
+D:\TP_CMD>set maVar
+La variable d’environnement maVar n’est pas définie.
+
+D:\TP_CMD>set maVar=Hello
+
+D:\TP_CMD>set
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\xav\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=APIXHR6
+ComSpec=C:\WINDOWS\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+HOMEDRIVE=C:
+HOMEPATH=\Users\xav
+LOCALAPPDATA=C:\Users\xav\AppData\Local
+LOGONSERVER=\\APIXHR6
+maVar=Hello
+...
+
+D:\TP_CMD>set maVar
+maVar=Hello
+
+D:\TP_CMD>set maVar=
+
+D:\TP_CMD>set
+...
+
+D:\TP_CMD>
+D:\TP_CMD>set A=12
+
+D:\TP_CMD>set B=3
+
+D:\TP_CMD>set C=A+B
+
+D:\TP_CMD>set C
+C=A+B
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=APIXHR6
+ComSpec=C:\WINDOWS\system32\cmd.exe
+
+D:\TP_CMD>set C=%A%+%B%
+
+D:\TP_CMD>set C
+C=12+3
+
+D:\TP_CMD>set C=%A%%B%
+
+D:\TP_CMD>set C
+C=123
+
+D:\TP_CMD>set /A C=%A%+%B%
+15
+D:\TP_CMD>set C
+C=15
+
+D:\TP_CMD>set /P monEntreeClavier=Entrez un nombre entier
+Entrez un nombre entier13
+
+D:\TP_CMD>set mon
+monEntreeClavier=13
+
+D:\TP_CMD>set MON
+monEntreeClavier=13
+
+D:\TP_CMD>set /P monEntreeClavier=Entrez un nombre entier
+Entrez un nombre entierazerTy
+
+D:\TP_CMD>set MON
+monEntreeClavier=azerTy
+
+D:\TP_CMD>
+D:\TP_CMD>if %monEntreeClavier%==azerty echo gagne
+
+D:\TP_CMD>if %monEntreeClavier%==azerTy echo gagne
+gagne
+
+D:\TP_CMD>if %monEntreeClavier%==azerTy echo gagne
+gagne
+
+D:\TP_CMD>if %monEntreeClavier%==azerty echo gagne
+
+===============================
+
+D:\TP_CMD>help if
+Lance l’exécution conditionnelle dans un programme de commandes.
+
+IF [NOT] ERRORLEVEL nombre commande
+IF [NOT] chaîne1==chaîne2 commande
+IF [NOT] EXIST nom_de_fichier commande
+
+  NOT 
+  ............
+  
+D:\TP_CMD>  help for
+Exécute une commande donnée pour chaque fichier d’un ensemble de fichiers.
+
+FOR %variable IN (ensemble) DO commande [paramètres]
+...
+
+
+D:\TP_CMD> dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD
+
+17/10/2019  09:15    <DIR>          .
+17/10/2019  09:15    <DIR>          ..
+16/10/2019  18:06             8 384 demo1.txt
+16/10/2019  23:53               139 essai.bat
+16/10/2019  14:49                24 f1
+17/10/2019  08:59                 0 f10
+17/10/2019  09:00                 0 f11
+16/10/2019  14:55                 0 f5
+16/10/2019  15:19                32 f7
+16/10/2019  15:20                32 f8
+17/10/2019  08:58                29 f9
+16/10/2019  17:03                41 fic7
+16/10/2019  15:07             7 177 help.txt
+16/10/2019  15:26    <DIR>          r1
+16/10/2019  14:43    <DIR>          r2
+17/10/2019  09:22                57 test.bat
+              12 fichier(s)           15 915 octets
+               4 Rép(s)  253 108 326 400 octets libres
+
+D:\TP_CMD>tree /f
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+│   demo1.txt
+│   essai.bat
+│   f1
+│   f10
+│   f11
+│   f5
+│   f7
+│   f8
+│   f9
+│   fic7
+│   help.txt
+│   test.bat
+│
+├───r1
+│       f5
+│
+└───r2
+
+D:\TP_CMD>rmdir r1
+Le répertoire n’est pas vide.
+
+D:\TP_CMD>
+D:\TP_CMD>help rmdir
+Supprime un répertoire.
+
+RMDIR [/S] [/Q] [lecteur:]chemin
+RD [/S] [/Q] [lecteur:]chemin
+
+    /S      Supprime tous les répertoires et les fichiers dans le
+            répertoire spécifié en plus du répertoire lui-même.
+            Utilisé pour supprimer une arborescence.
+
+    /Q      Mode silencieux, ne demande pas de confirmation pour supprimer
+            une arborescence de répertoires avec /S.
+
+D:\TP_CMD>
+

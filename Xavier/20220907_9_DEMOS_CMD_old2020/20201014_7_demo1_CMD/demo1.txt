@@ -1,0 +1,673 @@
+
+C:\Users\xav>help tree
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+
+C:\Users\xav>
+C:\Users\xav>d:
+
+D:\>c:
+
+C:\Users\xav>d:
+
+D:\>
+
+D:\>dir TP_CMD
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD
+
+22/10/2019  09:24    <DIR>          .
+22/10/2019  09:24    <DIR>          ..
+22/10/2019  09:26               204 contenu.txt
+22/10/2019  09:22               414 contenu_UTF16_BE.txt
+22/10/2019  09:24               414 contenu_UTF16_LE.txt
+22/10/2019  09:12               247 contenu_UTF8_BOM.txt
+16/10/2019  23:53               139 essai.bat
+16/10/2019  14:49                24 f1
+17/10/2019  08:59                 0 f10
+17/10/2019  09:00                 0 f11
+16/10/2019  14:55                 0 f5
+16/10/2019  15:19                32 f7
+16/10/2019  15:20                32 f8
+17/10/2019  08:58                29 f9
+16/10/2019  17:03                41 fic7
+16/10/2019  15:07             7 177 help.txt
+17/10/2019  14:03                 0 Nouveau document texte.txt
+16/10/2019  15:26    <DIR>          r1
+18/10/2019  09:20               574 sauv_path.txt
+17/10/2019  13:36               107 test.bat
+18/10/2019  10:45             7 099 TP_DOS.zip
+              18 fichier(s)           16 533 octets
+               3 Rép(s)  93 240 770 560 octets libres
+
+D:\>
+D:\>
+D:\>md TP_CMD2
+
+D:\>
+D:\>cd TP_CMD2
+
+D:\TP_CMD2>mkdir r1
+
+D:\TP_CMD2>cd
+D:\TP_CMD2
+
+D:\TP_CMD2>cd
+D:\TP_CMD2
+
+D:\TP_CMD2>cd \
+
+D:\>
+D:\>
+D:\>echo nul > TP_CMD2\f1
+
+D:\>
+D:\>cd TP_CMD2
+
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  16:19    <DIR>          .
+14/10/2020  16:19    <DIR>          ..
+14/10/2020  16:19                 6 f1
+14/10/2020  16:16    <DIR>          r1
+               1 fichier(s)                6 octets
+               3 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2>type nul  > TP_CMD2\f1
+Le chemin d’accès spécifié est introuvable.
+
+D:\TP_CMD2>type nul  > f1
+
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  16:19    <DIR>          .
+14/10/2020  16:19    <DIR>          ..
+14/10/2020  16:25                24 f1
+14/10/2020  16:16    <DIR>          r1
+               1 fichier(s)               24 octets
+               3 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+└───r1
+
+D:\TP_CMD2>mkdir r1\r12
+
+D:\TP_CMD2>
+D:\TP_CMD2>cd r1
+
+D:\TP_CMD2\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2\r1
+
+14/10/2020  16:27    <DIR>          .
+14/10/2020  16:27    <DIR>          ..
+14/10/2020  16:27    <DIR>          r12
+               0 fichier(s)                0 octets
+               3 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2\r1>cd ..
+
+D:\TP_CMD2>cd ..
+
+D:\>cd \TP_CMD2\r1\r12
+
+D:\TP_CMD2\r1\r12>C:
+
+C:\Users\xav>
+C:\Users\xav>mkdir D:\TP_CMD2\r11
+
+C:\Users\xav>mkdir D:\TP_CMD2\r1\r11
+
+C:\Users\xav>d:
+
+D:\TP_CMD2\r1\r12>cd TP
+Le chemin d’accès spécifié est introuvable.
+
+D:\TP_CMD2\r1\r12>cd ..
+
+D:\TP_CMD2\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2\r1
+
+14/10/2020  16:30    <DIR>          .
+14/10/2020  16:30    <DIR>          ..
+14/10/2020  16:30    <DIR>          r11
+14/10/2020  16:27    <DIR>          r12
+               0 fichier(s)                0 octets
+               4 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2\r1>cd ..
+
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  16:30    <DIR>          .
+14/10/2020  16:30    <DIR>          ..
+14/10/2020  16:25                24 f1
+14/10/2020  16:30    <DIR>          r1
+14/10/2020  16:30    <DIR>          r11
+               1 fichier(s)               24 octets
+               4 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2>rmdir r11
+
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  16:31    <DIR>          .
+14/10/2020  16:31    <DIR>          ..
+14/10/2020  16:25                24 f1
+14/10/2020  16:30    <DIR>          r1
+               1 fichier(s)               24 octets
+               3 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2>cd r1
+
+D:\TP_CMD2\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2\r1
+
+14/10/2020  16:30    <DIR>          .
+14/10/2020  16:30    <DIR>          ..
+14/10/2020  16:30    <DIR>          r11
+14/10/2020  16:27    <DIR>          r12
+               0 fichier(s)                0 octets
+               4 Rép(s)  93 240 770 560 octets libres
+
+D:\TP_CMD2\r1>cd r11
+
+D:\TP_CMD2\r1\r11>
+D:\TP_CMD2\r1\r11>mkdir ..\..\r2
+
+D:\TP_CMD2\r1\r11>
+D:\TP_CMD2\r1\r11>mkdir \TP_CMD2\r2
+Un sous-répertoire ou un fichier \TP_CMD2\r2 existe déjà.
+
+D:\TP_CMD2\r1\r11>
+D:\TP_CMD2\r1\r11>
+D:\TP_CMD2\r1\r11>
+D:\TP_CMD2\r1\r11>cd ..\..
+
+D:\TP_CMD2>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+├───r1
+│   ├───r11
+│   └───r12
+└───r2
+
+D:\TP_CMD2>tree /F
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+│   f1
+│
+├───r1
+│   ├───r11
+│   └───r12
+└───r2
+
+D:\TP_CMD2>echo > r1\r12\f2
+
+D:\TP_CMD2>
+D:\TP_CMD2>echo > r1\r12\f3
+
+D:\TP_CMD2>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+├───r1
+│   ├───r11
+│   └───r12
+└───r2
+
+D:\TP_CMD2>tree /?
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+
+D:\TP_CMD2>tree /F
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+│   f1
+│
+├───r1
+│   ├───r11
+│   └───r12
+│           f2
+│           f3
+│
+└───r2
+
+D:\TP_CMD2>del \TP_CMD2\r1\r12\f3
+
+D:\TP_CMD2>
+D:\TP_CMD2>del \TP_CMD2\r1\r12\f4
+Impossible de trouver D:\TP_CMD2\r1\r12\f4
+
+D:\TP_CMD2>
+D:\TP_CMD2>help
+Pour plus d’informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+ASSOC          Affiche ou modifie les applications associées aux extensions de
+               fichiers.
+ATTRIB         Affiche ou modifie les attributs d’un fichier.
+BREAK          Active ou désactive le contrôle étendu de CTRL+C.
+BCDEDIT        Définit les propriétés dans la base de données de démarrage pour
+               le contrôle du chargement d’amorçage.
+CACLS          Affiche ou modifie les listes de contrôles d’accès aux fichiers.
+CALL           Appelle un fichier de commandes à partir d’un autre fichier de
+               commandes.
+CD             Modifie le répertoire ou affiche le répertoire actif.
+CHCP           Modifie ou affiche le numéro de la page de code active.
+CHDIR          Modifie le répertoire ou affiche le nom du répertoire actif.
+CHKDSK         Vérifie un disque et affiche un rapport d’état.
+CHKNTFS        Affiche ou modifie la vérification du disque au démarrage.
+CLS            Efface l’écran.
+CMD            Exécute une nouvelle instance de l’interpréteur de commandes de
+               Windows.
+COLOR          Modifie les couleurs du premier plan et de l’arrière-plan de la
+               console.
+COMP           Compare les contenus de deux fichiers ou groupes de fichiers.
+COMPACT        Modifie ou affiche la compression des fichiers sur une
+               partition NTFS.
+CONVERT        Convertit des volumes FAT en volumes NTFS. Vous ne pouvez pas
+               convertir le lecteur en cours d’utilisation.
+COPY           Copie un ou plusieurs fichiers.
+DATE           Affiche ou définit la date.
+DEL            Supprime un ou plusieurs fichiers.
+DIR            Affiche la liste des fichiers et des sous-répertoires d’un
+               répertoire.
+DISKPART       Affiche ou configure les propriétés d'une partition de disque.
+DOSKEY         Modifie les lignes de commande, rappelle des commandes Windows,
+               et crée des macros.
+DRIVERQUERY    Affiche l'état et les propriétés du pilote de périphérique en
+               cours d'utilisation.
+ECHO           Affiche des messages ou active/désactive l'affichage des
+               commandes.
+ENDLOCAL       Stoppe la localisation des modifications d'environnement dans
+               un fichier de commandes.
+ERASE          Supprime un ou plusieurs fichiers.
+EXIT           Quitte l'interpréteur de commandes (CMD.EXE).
+FC             Compare deux fichiers ou groupes de fichiers et affiche
+               les différences.
+FIND           Recherche une chaîne de caractères dans un ou plusieurs
+               fichiers.
+FINDSTR        Cherche des chaînes dans les fichiers.
+FOR            Exécute une commande sur chaque fichier d'un ensemble de
+               fichiers.
+FORMAT         Formate un disque devant être utilisé avec Windows.
+FSUTIL         Affiche ou configure les propriétés du système de fichiers.
+FTYPE          Affiche ou modifie les types de fichiers utilisés dans les
+               associations d'extensions.
+GOTO           Indique l'exécution d'un fichier de commandes pour une ligne
+               identifiée par une étiquette.
+GPRESULT       Affiche les informations de stratégie de groupe pour un
+               ordinateur ou un utilisateur.
+GRAFTABL       Permet à Windows d'afficher un jeu de caractères en
+               mode graphique.
+HELP           Affiche des informations sur les commandes de Windows.
+ICACLS         Afficher, modifier, sauvegarder ou restaurer les listes de
+               contrôle d'accès pour les fichiers et les répertoires.
+IF             Effectue un traitement conditionnel dans un fichier de
+               commandes.
+LABEL          Crée, modifie ou supprime le nom de volume d'un disque.
+MD             Crée un répertoire.
+MKDIR          Crée un répertoire.
+MKLINK         Créer des liens symboliques et des liens physiques
+MODE           Configure un périphérique du système.
+MORE           Affiche la sortie écran par écran.
+MOVE           Déplace un ou plusieurs fichiers d'un répertoire
+               à un autre.
+OPENFILES      Affiche les fichiers partagés ouverts à distance par les
+               utilisateurs.
+PATH           Affiche ou définit le chemin de recherche des fichiers
+               exécutables.
+PAUSE          Interrompt l'exécution d'un fichier de commandes et affiche un
+               message.
+POPD           Restaure la valeur précédente du répertoire actif enregistrée
+               par PUSHD.
+PRINT          Imprime un fichier texte.
+PROMPT         Modifie l'invite de commande de Windows.
+PUSHD          Enregistre le répertoire actif puis le modifie.
+RD             Supprime un répertoire.
+RECOVER        Récupère l'information lisible d'un disque défectueux.
+REM            Insère un commentaire dans un fichier de commandes ou
+               CONFIG.SYS.
+REN            Renomme un ou plusieurs fichiers.
+RENAME         Renomme un ou plusieurs fichiers.
+REPLACE        Remplace des fichiers.
+RMDIR          Supprime un répertoire.
+ROBOCOPY       Utilitaire avancé pour copier les fichiers et les
+               arborescences de répertoires
+SET            Affiche, définit ou supprime des variables d'environnement
+               Windows.
+SETLOCAL       Commence la localisation des modifications d'environnement dans
+               un fichier de commandes.
+SC             Affiche ou configure les services (processus en arrière-plan).
+SCHTASKS       Planifie les commandes et les programmes à exécuter sur
+               l'ordinateur.
+SHIFT          Modifie la position des paramètres remplaçables dans un fichier
+               de commandes.
+SHUTDOWN       Permet un arrêt local ou distant correct de l'ordinateur.
+SORT           Trie les entrées.
+START          Ouvre une fenêtre séparée pour l'exécution d'un programme ou
+               d'une commande spécifique.
+SUBST          Associe un chemin d'accès à une lettre de lecteur.
+SYSTEMINFO     Affiche les propriétés et la configuration spécifiques de
+               l'ordinateur.
+TASKLIST       Affiche toutes les tâches en cours d'exécution, y compris les
+               services.
+TASKKILL       Termine ou interrompt un processus ou une application en cours
+               d'exécution.
+TIME           Affiche ou définit l'heure du système.
+TITLE          Définit le titre de la fenêtre pour une session CMD.EXE.
+TREE           Affiche le graphisme de la structure de répertoire d'un lecteur
+               ou d'un chemin d'accès.
+TYPE           Affiche le contenu d'un fichier texte.
+VER            Affiche la version de Windows.
+VERIFY         Demande à Windows de vérifier si vos fichiers sont
+               correctement écrits sur le disque.
+VOL            Affiche le nom et le numéro de série d'un volume de disque.
+XCOPY          Copie les fichiers et les arborescences de répertoires.
+WMIC           Affiche les informations WMI dans l'interface de commande
+               interactive.
+
+Pour obtenir plus d'informations sur les outils, consultez la référence de
+commande en ligne dans l'aide en ligne.
+
+D:\TP_CMD2>help rmdir
+Supprime un répertoire.
+
+RMDIR [/S] [/Q] [lecteur:]chemin
+RD [/S] [/Q] [lecteur:]chemin
+
+    /S      Supprime tous les répertoires et les fichiers dans le
+            répertoire spécifié en plus du répertoire lui-même.
+            Utilisé pour supprimer une arborescence.
+
+    /Q      Mode silencieux, ne demande pas de confirmation pour supprimer
+            une arborescence de répertoires avec /S.
+
+D:\TP_CMD2>
+D:\TP_CMD2>help > help.txt
+
+D:\TP_CMD2>
+D:\TP_CMD2>type help.txt
+Pour plus d'informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+ASSOC          Affiche ou modifie les applications associées aux extensions de
+               fichiers.
+ATTRIB         Affiche ou modifie les attributs d'un fichier.
+BREAK          Active ou désactive le contrôle étendu de CTRL+C.
+BCDEDIT        Définit les propriétés dans la base de données de démarrage pour
+               le contrôle du chargement d'amorçage.
+CACLS          Affiche ou modifie les listes de contrôles d'accès aux fichiers.
+CALL           Appelle un fichier de commandes à partir d'un autre fichier de
+               commandes.
+CD             Modifie le répertoire ou affiche le répertoire actif.
+CHCP           Modifie ou affiche le numéro de la page de code active.
+CHDIR          Modifie le répertoire ou affiche le nom du répertoire actif.
+CHKDSK         Vérifie un disque et affiche un rapport d'état.
+CHKNTFS        Affiche ou modifie la vérification du disque au démarrage.
+CLS            Efface l'écran.
+CMD            Exécute une nouvelle instance de l'interpréteur de commandes de
+               Windows.
+COLOR          Modifie les couleurs du premier plan et de l'arrière-plan de la
+               console.
+COMP           Compare les contenus de deux fichiers ou groupes de fichiers.
+COMPACT        Modifie ou affiche la compression des fichiers sur une
+               partition NTFS.
+CONVERT        Convertit des volumes FAT en volumes NTFS. Vous ne pouvez pas
+               convertir le lecteur en cours d'utilisation.
+COPY           Copie un ou plusieurs fichiers.
+DATE           Affiche ou définit la date.
+DEL            Supprime un ou plusieurs fichiers.
+DIR            Affiche la liste des fichiers et des sous-répertoires d'un
+               répertoire.
+DISKPART       Affiche ou configure les propriétés d'une partition de disque.
+DOSKEY         Modifie les lignes de commande, rappelle des commandes Windows,
+               et crée des macros.
+DRIVERQUERY    Affiche l'état et les propriétés du pilote de périphérique en
+               cours d'utilisation.
+ECHO           Affiche des messages ou active/désactive l'affichage des
+               commandes.
+ENDLOCAL       Stoppe la localisation des modifications d'environnement dans
+               un fichier de commandes.
+ERASE          Supprime un ou plusieurs fichiers.
+EXIT           Quitte l'interpréteur de commandes (CMD.EXE).
+FC             Compare deux fichiers ou groupes de fichiers et affiche
+               les différences.
+FIND           Recherche une chaîne de caractères dans un ou plusieurs
+               fichiers.
+FINDSTR        Cherche des chaînes dans les fichiers.
+FOR            Exécute une commande sur chaque fichier d'un ensemble de
+               fichiers.
+FORMAT         Formate un disque devant être utilisé avec Windows.
+FSUTIL         Affiche ou configure les propriétés du système de fichiers.
+FTYPE          Affiche ou modifie les types de fichiers utilisés dans les
+               associations d'extensions.
+GOTO           Indique l'exécution d'un fichier de commandes pour une ligne
+               identifiée par une étiquette.
+GPRESULT       Affiche les informations de stratégie de groupe pour un
+               ordinateur ou un utilisateur.
+GRAFTABL       Permet à Windows d'afficher un jeu de caractères en
+               mode graphique.
+HELP           Affiche des informations sur les commandes de Windows.
+ICACLS         Afficher, modifier, sauvegarder ou restaurer les listes de
+               contrôle d'accès pour les fichiers et les répertoires.
+IF             Effectue un traitement conditionnel dans un fichier de
+               commandes.
+LABEL          Crée, modifie ou supprime le nom de volume d'un disque.
+MD             Crée un répertoire.
+MKDIR          Crée un répertoire.
+MKLINK         Créer des liens symboliques et des liens physiques
+MODE           Configure un périphérique du système.
+MORE           Affiche la sortie écran par écran.
+MOVE           Déplace un ou plusieurs fichiers d'un répertoire
+               à un autre.
+OPENFILES      Affiche les fichiers partagés ouverts à distance par les
+               utilisateurs.
+PATH           Affiche ou définit le chemin de recherche des fichiers
+               exécutables.
+PAUSE          Interrompt l'exécution d'un fichier de commandes et affiche un
+               message.
+POPD           Restaure la valeur précédente du répertoire actif enregistrée
+               par PUSHD.
+PRINT          Imprime un fichier texte.
+PROMPT         Modifie l'invite de commande de Windows.
+PUSHD          Enregistre le répertoire actif puis le modifie.
+RD             Supprime un répertoire.
+RECOVER        Récupère l'information lisible d'un disque défectueux.
+REM            Insère un commentaire dans un fichier de commandes ou
+               CONFIG.SYS.
+REN            Renomme un ou plusieurs fichiers.
+RENAME         Renomme un ou plusieurs fichiers.
+REPLACE        Remplace des fichiers.
+RMDIR          Supprime un répertoire.
+ROBOCOPY       Utilitaire avancé pour copier les fichiers et les
+               arborescences de répertoires
+SET            Affiche, définit ou supprime des variables d'environnement
+               Windows.
+SETLOCAL       Commence la localisation des modifications d'environnement dans
+               un fichier de commandes.
+SC             Affiche ou configure les services (processus en arrière-plan).
+SCHTASKS       Planifie les commandes et les programmes à exécuter sur
+               l'ordinateur.
+SHIFT          Modifie la position des paramètres remplaçables dans un fichier
+               de commandes.
+SHUTDOWN       Permet un arrêt local ou distant correct de l'ordinateur.
+SORT           Trie les entrées.
+START          Ouvre une fenêtre séparée pour l'exécution d'un programme ou
+               d'une commande spécifique.
+SUBST          Associe un chemin d'accès à une lettre de lecteur.
+SYSTEMINFO     Affiche les propriétés et la configuration spécifiques de
+               l'ordinateur.
+TASKLIST       Affiche toutes les tâches en cours d'exécution, y compris les
+               services.
+TASKKILL       Termine ou interrompt un processus ou une application en cours
+               d'exécution.
+TIME           Affiche ou définit l'heure du système.
+TITLE          Définit le titre de la fenêtre pour une session CMD.EXE.
+TREE           Affiche le graphisme de la structure de répertoire d'un lecteur
+               ou d'un chemin d'accès.
+TYPE           Affiche le contenu d'un fichier texte.
+VER            Affiche la version de Windows.
+VERIFY         Demande à Windows de vérifier si vos fichiers sont
+               correctement écrits sur le disque.
+VOL            Affiche le nom et le numéro de série d'un volume de disque.
+XCOPY          Copie les fichiers et les arborescences de répertoires.
+WMIC           Affiche les informations WMI dans l'interface de commande
+               interactive.
+
+Pour obtenir plus d'informations sur les outils, consultez la référence de
+commande en ligne dans l'aide en ligne.
+
+D:\TP_CMD2>
+D:\TP_CMD2>copy con fic1.txt
+azerty
+azerty
+lmkmlml
+lmkmlml
+^Z
+
+D:\TP_CMD2>
+D:\TP_CMD2>
+D:\TP_CMD2>
+D:\TP_CMD2>
+D:\TP_CMD2>type fic1.txt
+        1 fichier(s) copié(s).
+
+D:\TP_CMD2>
+D:\TP_CMD2>
+D:\TP_CMD2>
+D:\TP_CMD2>
+D:\TP_CMD2>copy con fic1.txt
+aaaaaaaa
+Remplacer fic1.txt (Oui/Non/Tous) : oui
+ggggggggggg
+^Z
+        1 fichier(s) copié(s).
+
+D:\TP_CMD2>type fic1.txt
+aaaaaaaa
+ggggggggggg
+
+D:\TP_CMD2>copy con: fic2.txt
+gjhgjhgjgjh hjhgjhjh
+lklkjlkj ljlkj
+
+lkjlkjlkj lklkjlk
+^Z^Z        1 fichier(s) copié(s).
+
+D:\TP_CMD2>type fic2.txt
+gjhgjhgjgjh hjhgjhjh
+lklkjlkj ljlkj
+
+lkjlkjlkj lklkjlk
+
+D:\TP_CMD2>
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  22:28    <DIR>          .
+14/10/2020  22:28    <DIR>          ..
+14/10/2020  22:28            26 044 00_ListeDesCommandes_W10_2Pages.docx
+14/10/2020  16:25                24 f1
+14/10/2020  16:56                23 fic1.txt
+14/10/2020  16:57                59 fic2.txt
+14/10/2020  21:38             6 551 help.txt
+14/10/2020  16:42             7 177 help_OEM850.txt
+14/10/2020  16:45             7 305 help_UTF8.txt
+14/10/2020  16:30    <DIR>          r1
+14/10/2020  16:33    <DIR>          r2
+               7 fichier(s)           47 183 octets
+               4 Rép(s)  93 240 700 928 octets libres
+
+D:\TP_CMD2>echo. >essai
+
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  23:46    <DIR>          .
+14/10/2020  23:46    <DIR>          ..
+14/10/2020  22:28            26 044 00_ListeDesCommandes_W10_2Pages.docx
+14/10/2020  23:46                 3 essai
+14/10/2020  16:25                24 f1
+14/10/2020  16:56                23 fic1.txt
+14/10/2020  16:57                59 fic2.txt
+14/10/2020  21:38             6 551 help.txt
+14/10/2020  16:42             7 177 help_OEM850.txt
+14/10/2020  16:45             7 305 help_UTF8.txt
+14/10/2020  16:30    <DIR>          r1
+14/10/2020  16:33    <DIR>          r2
+               8 fichier(s)           47 186 octets
+               4 Rép(s)  93 240 700 928 octets libres
+
+D:\TP_CMD2>type NUL >essai2
+
+D:\TP_CMD2>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD2
+
+14/10/2020  23:47    <DIR>          .
+14/10/2020  23:47    <DIR>          ..
+14/10/2020  22:28            26 044 00_ListeDesCommandes_W10_2Pages.docx
+14/10/2020  23:46                 3 essai
+14/10/2020  23:47                 0 essai2
+14/10/2020  16:25                24 f1
+14/10/2020  16:56                23 fic1.txt
+14/10/2020  16:57                59 fic2.txt
+14/10/2020  21:38             6 551 help.txt
+14/10/2020  16:42             7 177 help_OEM850.txt
+14/10/2020  16:45             7 305 help_UTF8.txt
+14/10/2020  16:30    <DIR>          r1
+14/10/2020  16:33    <DIR>          r2
+               9 fichier(s)           47 186 octets
+               4 Rép(s)  93 240 700 928 octets libres
+
+D:\TP_CMD2>

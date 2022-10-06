@@ -1,0 +1,39 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+D:\TP_CMD>help
+Pour plus d’informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+ASSOC          Affiche ou modifie les applications associées aux extensions de
+.....
+Pour obtenir plus d'informations sur les outils, consultez la référence de
+commande en ligne dans l'aide en ligne.
+
+D:\TP_CMD>help > help.txt
+
+D:\TP_CMD>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+└───rep1
+
+D:\TP_CMD>cd ..
+
+D:\>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+├───00_deroule_Ftp
+
+
+│   │   │   ├───lib
+│   │   │   └───src
+│   │   │       └───tp_objet_09
+│   │   │           └───biblio
+│   │   │               ├───metier
+^C
+D:\>militaire OUI
+'militaire' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+D:\>

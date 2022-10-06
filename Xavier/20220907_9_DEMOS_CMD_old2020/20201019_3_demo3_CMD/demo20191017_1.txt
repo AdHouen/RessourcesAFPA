@@ -1,0 +1,101 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+D:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_DOS
+
+16/10/2019  23:45    <DIR>          .
+16/10/2019  23:45    <DIR>          ..
+16/10/2019  18:06             8 384 demo1.txt
+16/10/2019  23:53               139 essai.bat
+16/10/2019  14:49                24 f1
+16/10/2019  14:55                 0 f5
+16/10/2019  15:19                32 f7
+16/10/2019  15:20                32 f8
+16/10/2019  17:03                41 fic7
+16/10/2019  15:07             7 177 help.txt
+16/10/2019  15:26    <DIR>          r1
+16/10/2019  14:43    <DIR>          r2
+               8 fichier(s)           15 829 octets
+               4 Rép(s)  253 108 326 400 octets libres
+
+D:\TP_DOS>
+D:\TP_DOS>copy con  f9
+aze
+jjjjjjjjjj
+
+kkkkkkkkkk^Z
+        1 fichier(s) copié(s).
+
+D:\TP_DOS>type f9
+aze
+jjjjjjjjjj
+
+kkkkkkkkkk
+D:\TP_DOS>
+D:\TP_DOS>copy nul f10
+        1 fichier(s) copié(s).
+
+D:\TP_DOS>type nul > f11
+
+D:\TP_DOS>
+D:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_DOS
+
+17/10/2019  09:00    <DIR>          .
+17/10/2019  09:00    <DIR>          ..
+16/10/2019  18:06             8 384 demo1.txt
+16/10/2019  23:53               139 essai.bat
+16/10/2019  14:49                24 f1
+17/10/2019  08:59                 0 f10
+17/10/2019  09:00                 0 f11
+16/10/2019  14:55                 0 f5
+16/10/2019  15:19                32 f7
+16/10/2019  15:20                32 f8
+17/10/2019  08:58                29 f9
+16/10/2019  17:03                41 fic7
+16/10/2019  15:07             7 177 help.txt
+16/10/2019  15:26    <DIR>          r1
+16/10/2019  14:43    <DIR>          r2
+              11 fichier(s)           15 858 octets
+               4 Rép(s)  253 108 326 400 octets libres
+
+D:\TP_DOS>mspaint
+
+D:\TP_DOS>notepad
+
+D:\TP_DOS>"C:\Program Files\Notepad++\notepad++.exe"
+
+D:\TP_DOS>notepad++.exe
+'notepad++.exe' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+D:\TP_DOS>
+D:\TP_DOS>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;
+
+D:\TP_DOS>test.bat
+
+D:\TP_DOS>echo Bonjour les CDA
+Bonjour les CDA
+
+D:\TP_DOS>set PATH=%PATH%;C:\Program Files\Notepad++
+
+D:\TP_DOS>
+D:\TP_DOS>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Notepad++
+
+D:\TP_DOS>set PATH
+Path=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\Notepad++
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+
+D:\TP_DOS>
+D:\TP_DOS>notepad++.exe
+
+D:\TP_DOS>

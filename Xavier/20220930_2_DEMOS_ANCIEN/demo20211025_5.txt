@@ -1,0 +1,305 @@
+Microsoft Windows [version 10.0.19043.1288]
+(c) Microsoft Corporation. Tous droits réservés.
+
+D:\TP_CMD>help set
+Affiche, fixe ou supprime des variables d’environnement de cmd.exe.
+.........
+
+%RANDOM% - se développe en un nombre aléatoire compris entre 0 et 32767.
+
+.......
+D:\TP_CMD>help copy
+Copie un ou plusieurs fichiers sur un autre emplacement.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B ] source [/A | /B]
+     [+ source [/A | /B] [+ ...]] [cible [/A | /B]]
+
+  source       Fichier(s) à copier.
+  /A           Indique un fichier texte ASCII.
+  /B           Indique un fichier binaire.
+  /D           Permet au fichier cible d’être créé sous forme déchiffrée.
+  cible        Répertoire et/ou nom de fichier cible.
+  /V           Vérifie l’écriture du ou des fichiers cible.
+  /N           Utilise un nom de fichier court, s’il est disponible, lors de
+               la copie d’un fichier ayant un nom supérieur à 8.3 caract.
+  /Y           Supprime la confirmation de remplacement d’un fichier
+ ..........
+
+D:\TP_CMD>dir
+
+
+D:\TP_CMD>type Cree_long_absolu.bat
+
+
+D:\TP_CMD>Cree_long_absolu.bat
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>dir
+ 
+
+D:\TP_CMD>rd /?
+Supprime un répertoire.
+
+D:\TP_CMD>supprime_long_absolu.bat
+
+D:\TP_CMD>cree_absolu.bat
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>supprime_absolu.bat
+
+D:\TP_CMD>cree_absolu.bat
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>supprime_absolu.bat
+
+D:\TP_CMD>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Common Files\IDRS\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\TP_CMD\bin;C:\Program Files\7-Zip;C:\jdk-11.0.5\bin;C:\apache-ant-1.10.7\bin;C:\app\xav\product\18.0.0\dbhomeXE\bin;D:\TP_CMD;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;;F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;
+
+D:\TP_CMD>cd %TMP%
+
+D:\TP_CMD>c:
+
+C:\Users\xav\AppData\Local\Temp>echo %TMP%
+C:\Users\xav\AppData\Local\Temp
+
+C:\Users\xav\AppData\Local\Temp>cree_absolu
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>c:
+
+C:\Users\xav\AppData\Local\Temp>supprime_absolu
+
+D:\TP_CMD>cree_long
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>supprime_long.bat
+
+D:\TP_CMD>echo off
+
+D:\TP_CMD>cree
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>supprime
+
+D:\TP_CMD>c:
+
+C:\Users\xav\AppData\Local\Temp>cree
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+C:\Users\xav\AppData\Local\Temp>dir
+............
+25/10/2021  10:10    <DIR>          r2
+25/10/2021  10:10    <DIR>          r3
+25/10/2021  10:10    <DIR>          r4
+25/10/2021  10:10    <DIR>          repertoire1
+............
+             115 fichier(s)      192 711 316 octets
+              71 Rép(s)  22 636 523 520 octets libres
+
+C:\Users\xav\AppData\Local\Temp>supprime
+
+C:\Users\xav\AppData\Local\Temp>dir
+.........
+
+C:\Users\xav\AppData\Local\Temp>
+C:\Users\xav\AppData\Local\Temp>cree
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>supprime
+
+D:\TP_CMD>cree
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+        1 fichier(s) copié(s).
+
+D:\TP_CMD>c:
+
+C:\Users\xav\AppData\Local\Temp>dir
+..........
+
+C:\Users\xav\AppData\Local\Temp>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Common Files\IDRS\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\TP_CMD\bin;C:\Program Files\7-Zip;C:\jdk-11.0.5\bin;C:\apache-ant-1.10.7\bin;C:\app\xav\product\18.0.0\dbhomeXE\bin;D:\TP_CMD;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;;F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;
+
+C:\Users\xav\AppData\Local\Temp>7z
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...] [@listfile]
+....
+
+C:\Users\xav\AppData\Local\Temp>d:
+
+D:\TP_CMD>md test_7z
+
+D:\TP_CMD>cd test_7z
+
+D:\TP_CMD\test_7z>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD\test_7z
+
+25/10/2021  10:26    <DIR>          .
+25/10/2021  10:26    <DIR>          ..
+25/10/2021  01:06           592 115 bootstrap-4.0.0-dist.zip
+25/10/2021  10:27                21 chkzip.tbat
+25/10/2021  10:13               160 cree.zip
+25/10/2021  01:12         1 521 347 jquery-3.6.0.zip
+25/10/2021  01:10           440 194 jquery-ui-1.13.0.zip
+25/10/2021  01:11         7 906 983 jquery.mobile-1.4.5.zip
+               6 fichier(s)       10 460 820 octets
+               2 Rép(s)  79 271 153 664 octets libres
+
+D:\TP_CMD\test_7z>chkzip.bat
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+
+Scanning the drive for archives:
+5 files, 10460799 bytes (10216 KiB)
+
+Testing archive: bootstrap-4.0.0-dist.zip
+--
+Path = bootstrap-4.0.0-dist.zip
+Type = zip
+Physical Size = 592115
+
+Everything is Ok
+
+Testing archive: cree.zip
+ERROR: cree.zip
+cree.zip
+Open ERROR: Can not open the file as [zip] archive
+
+
+ERRORS:
+Is not archive
+
+Testing archive: jquery-3.6.0.zip
+--
+Path = jquery-3.6.0.zip
+Type = zip
+Physical Size = 1521347
+Comment = 0cc1ad64ab0f482c13d6edd2a5226f309dd00006
+
+Everything is Ok
+
+Testing archive: jquery-ui-1.13.0.zip
+--
+Path = jquery-ui-1.13.0.zip
+Type = zip
+Physical Size = 440194
+
+Everything is Ok
+
+Testing archive: jquery.mobile-1.4.5.zip
+--
+Path = jquery.mobile-1.4.5.zip
+Type = zip
+Physical Size = 7906983
+
+Everything is Ok
+
+Archives: 5
+OK archives: 4
+Can't open as archive: 1
+Folders: 56
+Files: 1017
+Size:       27652680
+Compressed: 10460639
+
+D:\TP_CMD\test_7z>7z /?
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+
+
+
+Command Line Error:
+Unsupported command:
+/?
+
+D:\TP_CMD\test_7z>7z
+
+7-Zip 19.00 (x64) : Copyright (c) 1999-2018 Igor Pavlov : 2019-02-21
+Usage: 7z <command> [<switches>...] <archive_name> [<file_names>...] [@listfile]
+.............
+
+D:\TP_CMD\test_7z>
+D:\TP_CMD\test_7z>move chkzip.bat ..
+        1 fichier(s) déplacé(s).
+
+D:\TP_CMD\test_7z>cd ..
+
+D:\TP_CMD>
+
+D:\TP_CMD>dir *.bat
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD
+
+25/10/2021  10:27                21 chkzip.bat
+25/10/2021  10:13               160 cree.bat
+25/10/2021  10:07               181 Cree_long.bat
+25/10/2021  10:14                66 supprime.bat
+25/10/2021  10:08                70 supprime_long.bat
+               5 fichier(s)              498 octets
+               0 Rép(s)  79 271 153 664 octets libres
+
+D:\TP_CMD>move *.bat bin
+D:\TP_CMD\chkzip.bat
+D:\TP_CMD\cree.bat
+D:\TP_CMD\Cree_long.bat
+D:\TP_CMD\supprime.bat
+D:\TP_CMD\supprime_long.bat
+        5 fichier(s) déplacé(s).
+
+D:\TP_CMD>
+D:\TP_CMD>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD
+
+25/10/2021  10:32    <DIR>          .
+25/10/2021  10:32    <DIR>          ..
+21/10/2021  11:57                 5 aaa
+21/10/2021  11:24               169 arborescence.txt
+21/10/2021  11:20               159 arborescence_OEM850.txt
+21/10/2021  11:21               201 arborescence_UTF8.txt
+25/10/2021  10:32    <DIR>          bin
+19/10/2021  17:02                37 f1
+19/10/2021  17:03                 0 f2
+20/10/2021  11:07                 0 Fled.txt
+20/10/2021  11:05                 0 Freud
+21/10/2021  08:59               989 path_sauv.txt
+25/10/2021  10:16    <DIR>          r2
+25/10/2021  10:16    <DIR>          r3
+25/10/2021  10:16    <DIR>          r4
+25/10/2021  10:17    <DIR>          repertoire1
+20/10/2021  18:07       924 736 048 StockEtablissementHistorique_utf8.zip
+20/10/2021  18:07     1 455 565 330 StockEtablissement_utf8.zip
+20/10/2021  18:07     1 064 459 878 StockUniteLegaleHistorique_utf8.zip
+21/10/2021  11:28    <DIR>          test
+21/10/2021  11:29             1 905 test.zip
+25/10/2021  10:31    <DIR>          test_7z
+21/10/2021  10:11                 0 toto.tata.pdf
+21/10/2021  10:11                 0 toto.titi
+              15 fichier(s)    3 444 764 721 octets
+               9 Rép(s)  79 271 149 568 octets libres
+
+D:\TP_CMD>

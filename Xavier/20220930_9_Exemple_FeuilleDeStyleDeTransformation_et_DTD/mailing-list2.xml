@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE doc SYSTEM "mailing-list_1.dtd">
+<?xml-stylesheet type="text/xsl" href="transformation_html.xsl"?>
+<mailing-list>
+	<adresse>
+		<nom>Carthy</nom>
+		<email statut="perso">carthy@mail.fr</email>
+		<email statut="prof">cart@afpa.fr</email>
+	</adresse>
+	<adresse>
+		<nom>Anthony</nom>
+		<email statut="perso">Anthony@free.fr</email>
+	</adresse>
+</mailing-list>

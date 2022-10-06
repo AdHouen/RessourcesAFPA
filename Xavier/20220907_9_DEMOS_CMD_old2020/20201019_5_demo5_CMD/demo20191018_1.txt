@@ -1,0 +1,250 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+D:\TP_DOS>dir
+...............
+
+D:\TP_DOS>help dir
+Affiche la liste des fichiers et sous-répertoires d'un répertoire.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+
+  [drive:][path][filename]
+............
+
+D:\TP_DOS>dir /W
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_DOS
+
+[.]                          [..]                         demo20191016_1.txt           essai.bat
+f1                           f10                          f11                          f5
+f7                           f8                           f9                           fic7
+help.txt                     Nouveau document texte.txt   [r1]                         [r2]
+test.bat
+              13 fichier(s)           15 965 octets
+               4 Rép(s)  253 101 117 440 octets libres
+
+D:\TP_DOS>dir /B
+demo20191016_1.txt
+essai.bat
+f1
+f10
+f11
+f5
+f7
+f8
+f9
+fic7
+help.txt
+Nouveau document texte.txt
+r1
+r2
+test.bat
+
+D:\TP_DOS>
+D:\TP_DOS>cd ..
+
+D:\> dir /s
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\
+
+11/10/2019  13:36    <DIR>          00_deroule_Ftp_CDI20181029
+...................
+D:\>
+D:\> cd TP_DOS
+
+D:\TP_DOS>
+D:\TP_DOS>dir
+
+D:\TP_DOS>dir *.*
+
+D:\TP_DOS>dir f*
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_DOS
+
+16/10/2019  14:49                24 f1
+17/10/2019  08:59                 0 f10
+17/10/2019  09:00                 0 f11
+16/10/2019  14:55                 0 f5
+16/10/2019  15:19                32 f7
+16/10/2019  15:20                32 f8
+17/10/2019  08:58                29 f9
+16/10/2019  17:03                41 fic7
+               8 fichier(s)              158 octets
+               0 Rép(s)  253 101 117 440 octets libres
+
+D:\TP_DOS>dir /b f*
+f1
+f10
+f11
+f5
+f7
+f8
+f9
+fic7
+
+D:\TP_DOS>dir /b f?
+f1
+f5
+f7
+f8
+f9
+
+D:\TP_DOS>dir /b f??
+f1
+f10
+f11
+f5
+f7
+f8
+f9
+
+D:\TP_DOS>dir /b f*?
+f1
+f10
+f11
+f5
+f7
+f8
+f9
+fic7
+
+D:\TP_DOS>
+
+D:\TP_DOS>cd .\r2
+
+D:\TP_DOS\r2>cd ..
+
+D:\TP_DOS>cd r2
+
+D:\TP_DOS\r2>help cd
+
+D:\TP_DOS\r2>
+D:\TP_DOS\r2>chdir ..
+
+D:\TP_DOS>path > sauv_path.txt
+
+D:\TP_DOS>type sauv_path.txt
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;
+
+D:\TP_DOS>help rd
+
+D:\TP_DOS>dir
+
+D:\TP_DOS>rd r2 /s /q
+
+D:\TP_DOS>dir
+
+
+D:\TP_DOS>help cmd
+Démarre une nouvelle instance de l’interpréteur de commandes de Windows
+
+CMD [/A | /U] [/Q] [/D] [/E:ON | /E:OFF] [/F:ON | /F:OFF] [/V:ON | /V:OFF]
+    [[/S] [/C | /K] chaîne]
+..................
+
+
+D:\TP_DOS> help set
+Affiche, fixe ou supprime des variables d’environnement de cmd.exe.
+
+SET [variable=[chaîne]]
+...................
+
+D:\TP_DOS>echo %RANDOM%
+15075
+
+D:\TP_DOS>echo %RANDOM%
+30073
+
+D:\TP_DOS>echo %RANDOM%
+20765
+
+D:\TP_DOS>echo %RANDOM%
+29358
+
+D:\TP_DOS>help prompt
+
+D:\TP_DOS>cd D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>info oui
+Affirmatif
+Au revoir
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>info jhgjhgjhgjhg
+erreur
+Au revoir
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>info non
+Negatif
+Au revoir
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>echo %TEMP%
+C:\Users\xav\AppData\Local\Temp
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>echo %TMP%
+C:\Users\xav\AppData\Local\Temp
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>set
+............
+
+D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base>cd \TP_DOS
+
+D:\TP_DOS>
+==========================================
+D:\TP_DOS>ipconfig /all
+
+Configuration IP de Windows
+..................
+
+D:\TP_DOS>
+D:\TP_DOS>ping 10.75.24.117
+
+Envoi d’une requête 'Ping'  10.75.24.117 avec 32 octets de données :
+Réponse de 10.75.24.117 : octets=32 temps<1ms TTL=128
+Réponse de 10.75.24.117 : octets=32 temps=1 ms TTL=128
+Réponse de 10.75.24.117 : octets=32 temps=1 ms TTL=128
+Réponse de 10.75.24.117 : octets=32 temps=1 ms TTL=128
+
+Statistiques Ping pour 10.75.24.117:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 0ms, Maximum = 1ms, Moyenne = 0ms
+
+D:\TP_DOS>hostname
+APIXHR6
+
+D:\TP_DOS>D:\abc_08_DOS_TECHNO_PC\28_TP1_commande_de_base
+
+D:\TP_DOS>
+D:\TP_DOS>netstat -an
+
+Connexions actives
+
+  Proto  Adresse locale         Adresse distante       État
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+.........................
+  UDP    [::1]:62655            *:*
+  UDP    [fe80::ac5d:f4d:b13:a0bb%20]:1900  *:*
+  UDP    [fe80::ac5d:f4d:b13:a0bb%20]:62654  *:*
+
+D:\TP_DOS>netstat -an| find "TCP"
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+......................
+
+D:\TP_DOS>set | find "_HOME"
+
+D:\TP_DOS>java -version
+'java' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+D:\TP_DOS>

@@ -1,0 +1,98 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>d:
+
+D:\>dir
+ Le volume dans le lecteur D s’appelle DATA
+
+D:\>mkdir TP_CMD23
+
+D:\>cd TP_CMD23
+
+D:\TP_CMD23>type nul > monpremierfichier.txt
+
+D:\TP_CMD23>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD23
+
+07/09/2022  08:39    <DIR>          .
+07/09/2022  08:39    <DIR>          ..
+07/09/2022  08:39                 0 monpremierfichier.txt
+               1 fichier(s)                0 octets
+               2 Rép(s)  49 578 602 496 octets libres
+
+D:\TP_CMD23>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+Aucun sous-dossier existant
+
+
+D:\TP_CMD23>tree /?
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+
+D:\TP_CMD23>help tree
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+
+D:\TP_CMD23>
+D:\TP_CMD23>tree /f
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+    monpremierfichier.txt
+
+Aucun sous-dossier existant
+
+D:\TP_CMD23>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD23
+
+07/09/2022  08:39    <DIR>          .
+07/09/2022  08:39    <DIR>          ..
+07/09/2022  08:39                 0 monpremierfichier.txt
+               1 fichier(s)                0 octets
+               2 Rép(s)  49 578 602 496 octets libres
+
+D:\TP_CMD23>ls -l
+'ls' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+D:\TP_CMD23>mkdir rep1
+
+D:\TP_CMD23>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+└───rep1
+
+D:\TP_CMD23>type nul > .\rep1\fic1
+
+D:\TP_CMD23>tree /F
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+│   monpremierfichier.txt
+│
+└───rep1
+        fic1
+
+
+D:\TP_CMD23>type nul > \TP_CMD23\rep1\fic2
+

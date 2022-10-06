@@ -1,0 +1,29 @@
+Microsoft Windows [version 10.0.14393]
+(c) 2016 Microsoft Corporation. Tous droits réservés.
+
+D:\TP_DOS>java -version
+java version "1.8.0_111"
+Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
+Java HotSpot(TM) Client VM (build 25.111-b14, mixed mode, sharing)
+
+D:\TP_DOS>
+D:\TP_DOS>javac -version
+javac 1.8.0_111
+
+D:\TP_DOS>
+D:\TP_DOS>ant -version
+Apache Ant(TM) version 1.9.6 compiled on June 29 2015
+
+D:\TP_DOS>ant
+Buildfile: build.xml does not exist!
+Build failed
+
+D:\TP_DOS>ant -f build1.xml
+Buildfile: build1.xml does not exist!
+Build failed
+
+D:\TP_DOS>ant -f build1.xml   init
+Buildfile: build1.xml does not exist!
+Build failed
+
+D:\TP_DOS>

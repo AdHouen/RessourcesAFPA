@@ -1,0 +1,35 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>help tree
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+
+C:\Users\xav>help label
+Crée, modifie ou supprime le nom de volume d’un disque.
+
+LABEL [lecteur:][nom_volume]
+LABEL [/MP] [volume] [nom_volume]
+
+  lecteur:        Spécifie la lettre d’un lecteur.
+  nom_volume      Spécifie le nom du volume.
+  /MP             Spécifie si 'volume' doit être traité comme un point de
+                  montage (MP) ou comme un nom de volume.
+  volume          Spécifie la lettre de lecteur (suivie de deux-points),
+                  le point de montage ou le nom de volume. Si un nom
+                  de volume est spécifié, le commutateur /MP
+                  n’est pas nécessaire.
+
+C:\Users\xav>label
+Le volume dans le lecteur C: s’appelle OS_SSD
+Le numéro de série du volume est 1A25-9C31
+Nom du volume (32 caractères, Entrée pour ne rien mettre) ?
+
+Supprimer le nom de volume en cours (O/N) ? n
+
+C:\Users\xav>

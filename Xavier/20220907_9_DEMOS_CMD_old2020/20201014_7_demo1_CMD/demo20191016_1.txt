@@ -1,0 +1,324 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav> cd \
+C:\>
+C:\>d:
+
+d:\>
+d:\>mkdir TP_DOS
+
+d:\>cd TP_DOS
+d:\TP_DOS>
+
+d:\TP_DOS>cd ..
+
+d:\>
+d:\>help
+Pour plus d’informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+ASSOC          Affiche ou modifie les applications associées aux extensions de
+               fichiers.
+ATTRIB         Affiche ou modifie les attributs d’un fichier.
+BREAK          Active ou désactive le contrôle étendu de CTRL+C.
+BCDEDIT        Définit les propriétés dans la base de données de 
+...
+
+d:\>help cd
+Affiche le nom ou change le répertoire en cours.
+
+CHDIR [/D] [lecteur:][chemin]
+CHDIR [..]
+CD [/D] [lecteur:][chemin]
+CD [..]
+...
+
+d:\>help mkdir
+Crée un répertoire.
+
+MKDIR [lecteur:]chemin
+MD [lecteur:]chemin
+
+Si les extensions de commandes sont activées, MKDIR est modifié comme suit :
+
+MKDIR crée tout répertoire intermédiaire dans le chemin, si nécessaire.
+Par exemple, supposez que \a n’existe pas. Alors:
+
+    mkdir \a\b\c\d
+
+est équivalent à :
+
+    mkdir \a
+    chdir \a
+    mkdir b
+    chdir b
+    mkdir c
+    chdir c
+    mkdir d
+
+qui est ce que vous auriez dû entrer si les extensions étaient désactivées.
+
+d:\>dir TP_DOS
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  12:38    <DIR>          .
+16/10/2019  12:38    <DIR>          ..
+               0 fichier(s)                0 octets
+               2 Rép(s)  253 858 230 272 octets libres
+
+d:\>cd TP_DOS
+
+d:\TP_DOS>
+d:\TP_DOS>echo > f1
+
+d:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  14:39    <DIR>          .
+16/10/2019  14:39    <DIR>          ..
+16/10/2019  14:39                24 f1
+               1 fichier(s)               24 octets
+               2 Rép(s)  253 858 230 272 octets libres
+
+d:\TP_DOS>
+d:\TP_DOS>c:
+
+C:\>d:
+
+d:\TP_DOS>
+d:\TP_DOS>mkdir r1
+
+d:\TP_DOS>mkdir r2
+
+d:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  14:43    <DIR>          .
+16/10/2019  14:43    <DIR>          ..
+16/10/2019  14:39                24 f1
+16/10/2019  14:42    <DIR>          r1
+16/10/2019  14:43    <DIR>          r2
+               1 fichier(s)               24 octets
+               4 Rép(s)  253 858 230 272 octets libres
+
+d:\TP_DOS>cd r2
+
+d:\TP_DOS\r2>cd ..\r2
+
+d:\TP_DOS\r2>
+d:\TP_DOS\r2>cd ..\r1
+
+d:\TP_DOS\r1>cd ..\..
+
+d:\>
+d:\>cd TP_DOS
+
+d:\TP_DOS>echo nul >f3
+
+d:\TP_DOS>type f3
+nul
+
+d:\TP_DOS>
+d:\TP_DOS>cd ..
+
+d:\>tree TP_DOS
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:\TP_DOS
+├───r1
+└───r2
+
+d:\>help tree
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+d:\>tree /F TP_DOS
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:\TP_DOS
+│   f1
+│   f2
+│   f3
+│
+├───r1
+└───r2
+
+d:\>
+d:\>cd TP_DOS
+
+d:\TP_DOS>
+d:\TP_DOS>title > f5
+
+d:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  14:55    <DIR>          .
+16/10/2019  14:55    <DIR>          ..
+16/10/2019  14:49                24 f1
+16/10/2019  14:51                 4 f2
+16/10/2019  14:51                 6 f3
+16/10/2019  14:55                 0 f5
+16/10/2019  14:42    <DIR>          r1
+16/10/2019  14:43    <DIR>          r2
+               4 fichier(s)               34 octets
+               4 Rép(s)  253 858 230 272 octets libres
+
+
+d:\TP_DOS>mkdir /?
+Crée un répertoire.
+...
+
+d:\TP_DOS>help del
+Supprime un ou plusieurs fichiers.
+...
+
+d:\TP_DOS>del f3
+
+d:\TP_DOS>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;
+
+d:\TP_DOS>help > help.txt
+
+d:\TP_DOS>
+d:\TP_DOS>copy con f7
+azerty
+azerty
+lkjlkjljlkjl
+lkjlkjljlkjl
+
+lkjlkjlkjlkj
+
+d:\TP_DOS>type f7
+...
+
+
+d:\TP_DOS>help move
+Déplace des fichiers et renomme des fichiers et répertoires.
+....
+
+d:\TP_DOS>
+d:\TP_DOS>move f2 r1
+        1 fichier(s) déplacé(s).
+
+d:\TP_DOS>
+d:\TP_DOS>cd r1
+
+d:\TP_DOS\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS\r1
+
+16/10/2019  15:26    <DIR>          .
+16/10/2019  15:26    <DIR>          ..
+16/10/2019  14:51                 4 f2
+               1 fichier(s)                4 octets
+               2 Rép(s)  253 858 222 080 octets libres
+
+d:\TP_DOS\r1>rename f2 f5
+
+d:\TP_DOS\r1>
+d:\TP_DOS\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS\r1
+
+16/10/2019  15:26    <DIR>          .
+16/10/2019  15:26    <DIR>          ..
+16/10/2019  14:51                 4 f5
+               1 fichier(s)                4 octets
+               2 Rép(s)  253 858 222 080 octets libres
+
+d:\TP_DOS\r1>cd ..
+
+d:\TP_DOS>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+├───r1
+└───r2
+
+d:\TP_DOS>tree /f
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+│   demo1.txt
+│   f1
+│   f5
+│   f7
+│   f8
+│   help.txt
+│
+├───r1
+│       f5
+│
+└───r2
+
+d:\TP_DOS>
+d:\TP_DOS>set
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\xav\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=APIXHR6
+ComSpec=C:\WINDOWS\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+HOMEDRIVE=C:
+HOMEPATH=\Users\xav
+LOCALAPPDATA=C:\Users\xav\AppData\Local
+LOGONSERVER=\\APIXHR6
+NUMBER_OF_PROCESSORS=4
+OneDrive=C:\Users\xav\OneDrive
+OS=Windows_NT
+Path=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8e0a
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+SESSIONNAME=Console
+SystemDrive=C:
+SystemRoot=C:\WINDOWS
+TEMP=C:\Users\xav\AppData\Local\Temp
+TMP=C:\Users\xav\AppData\Local\Temp
+USERDOMAIN=APIXHR6
+USERDOMAIN_ROAMINGPROFILE=APIXHR6
+USERNAME=xav
+USERPROFILE=C:\Users\xav
+windir=C:\WINDOWS
+
+d:\TP_DOS>echo %USERNAME%
+xav
+
+d:\TP_DOS>echo USERNAME
+USERNAME
+
+
+d:\TP_DOS>

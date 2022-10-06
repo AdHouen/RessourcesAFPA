@@ -1,0 +1,265 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>d:
+
+D:\>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+ ......
+16/10/2019  09:19    <DIR>          xh_perso
+              36 fichier(s)   21 433 993 432 octets
+             187 Rép(s)  49 569 648 640 octets libres
+
+D:\>dir /p
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\
+........
+Appuyez sur une touche pour continuer...
+19/10/2020  11:24    <DIR>          TP_CMD_2020
+04/11/2021  15:23    <DIR>          TP_CMD_2021
+14/10/2020  19:12    <DIR>          TP_CMD_ANCIEN
+01/02/2016  18:22    <DIR>          TP_CMD_CORRECTION_EVAL
+27/10/2021  13:10    <DIR>          TP_ENCODAGE_OLD
+17/11/2021  17:16    <DIR>          TP_JAVA
+26/11/2021  12:59    <DIR>          TP_JAVA_08_REF_build_MANIFEST
+17/11/2021  17:06    <DIR>          TP_JAVA_ANCIEN
+27/10/2021  13:12    <DIR>          TP_XML
+15/07/2022  00:55                46 vide.txt
+22/07/2020  01:07           210 344 woodbrass1.jpg
+16/10/2019  09:19    <DIR>          xh_perso
+              36 fichier(s)   21 433 993 432 octets
+             187 Rép(s)  49 569 648 640 octets libres
+
+D:\> help dir
+Affiche la liste des fichiers et sous-répertoires d'un répertoire.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+.......
+
+D:\>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\
+............
+16/10/2019  09:19    <DIR>          xh_perso
+              36 fichier(s)   21 433 993 432 octets
+             187 Rép(s)  49 569 648 640 octets libres
+
+D:\>dir /b
+00_debut_progression_Tomcat_JavaWeb_JEE.zip.todel
+.........
+woodbrass1.jpg
+xh_perso
+
+D:\>dir /b /p
+00_debut_progression_Tomcat_JavaWeb_JEE.zip.todel
+00_deroule_Ftp
+...........
+00_deroule_photos-tableau_CDI20191014
+Appuyez sur une touche pour continuer...
+
+D:\>dir /bp
+Le format du paramètre est incorrect - "bp".
+
+D:\>cd c:\users
+
+D:\>c:
+
+c:\Users>d:
+
+D:\>c:
+
+c:\Users>cd d:\tp_cmd
+
+c:\Users>d:
+
+d:\TP_CMD>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_CMD
+
+07/09/2022  15:44    <DIR>          .
+07/09/2022  15:44    <DIR>          ..
+07/09/2022  15:28            28 275 cmd2.txt
+07/09/2022  15:29                52 essai1.bat
+07/09/2022  15:44             7 177 help.txt
+07/09/2022  15:40             7 177 help_OEM850.txt
+07/09/2022  15:43             7 305 help_UTF8.txt
+07/09/2022  08:39                 0 monpremierfichier.txt
+07/09/2022  08:55    <DIR>          rep1
+               6 fichier(s)           49 986 octets
+               3 Rép(s)  49 569 648 640 octets libres
+
+d:\TP_CMD>type nul > coucou.bat
+
+d:\TP_CMD>type nul > Coucou.bat
+
+d:\TP_CMD>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_CMD
+
+08/09/2022  09:42    <DIR>          .
+08/09/2022  09:42    <DIR>          ..
+07/09/2022  15:28            28 275 cmd2.txt
+08/09/2022  09:42                 0 coucou.bat
+07/09/2022  15:29                52 essai1.bat
+07/09/2022  15:44             7 177 help.txt
+07/09/2022  15:40             7 177 help_OEM850.txt
+07/09/2022  15:43             7 305 help_UTF8.txt
+07/09/2022  08:39                 0 monpremierfichier.txt
+07/09/2022  08:55    <DIR>          rep1
+               7 fichier(s)           49 986 octets
+               3 Rép(s)  49 569 648 640 octets libres
+
+d:\TP_CMD>copy con hello.txt
+kjhkjhkj jhkjhkh
+jlj khkjkjh hkjkjh^Z
+        1 fichier(s) copié(s).
+
+d:\TP_CMD>type hello.txt
+kjhkjhkj jhkjhkh
+jlj khkjkjh hkjkjh
+
+d:\TP_CMD>echo " salut" >> hello.txt
+
+d:\TP_CMD>type hello.txt
+kjhkjhkj jhkjhkh
+jlj khkjkjh hkjkjh" salut"
+
+d:\TP_CMD>help rmdir
+Supprime un répertoire.
+
+RMDIR [/S] [/Q] [lecteur:]chemin
+RD [/S] [/Q] [lecteur:]chemin
+
+    /S      Supprime tous les répertoires et les fichiers dans le
+            répertoire spécifié en plus du répertoire lui-même.
+            Utilisé pour supprimer une arborescence.
+
+    /Q      Mode silencieux, ne demande pas de confirmation pour supprimer
+            une arborescence de répertoires avec /S.
+
+d:\TP_CMD>help del
+Supprime un ou plusieurs fichiers.
+
+DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+..........
+Appuyez sur une touche pour continuer...
+
+Si les extensions de commandes sont activées, DEL et ERASE sont modifiées
+comme suit :
+La logique d’affichage du commutateur /S est inversée. Elle
+n’affiche que les fichiers supprimés, et pas ceux qui n’ont pas été trouvés.
+
+d:\TP_CMD>help copy
+Copie un ou plusieurs fichiers sur un autre emplacement.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B ] source [/A | /B]
+     [+ source [/A | /B] [+ ...]] [cible [/A | /B]]
+..........
+Pour concaténer des fichiers, spécifiez un seul fichier cible et plusieurs
+fichiers source (avec caractères génériques ou fichier1+fichier2+fichier3).
+
+d:\TP_CMD>help xcopy
+Copie des fichiers et des arborescences de répertoires.
+
+XCOPY source [destination] [/A | /M] [/D[:date]] [/P] [/S [/E]] [/V] [/W]
+                           [/C] [/I] [/Q] [/F] [/L] [/G] [/H] [/R] [/T] [/U]
+                           [/K] [/N] [/O] [/X] [/Y] [/-Y] [/Z] [/B] [/J]
+                           [/EXCLUDE:fich1[+fich2][+fich3]...] [/COMPRESS]
+..........
+Le commutateur /Y peut être défini dans la variable d’environnement
+d:\TP_CMD> help move
+Déplace des fichiers et renomme des fichiers et répertoires.
+
+Pour déplacer un ou plusieurs fichiers :
+MOVE [/Y | /-Y] [lecteur:][chemin]fichier1[,...] destination
+
+Pour renommer un répertoire:
+MOVE [/Y | /-Y] [lecteur:][chemin]répert1 répertoire2
+........
+L’option /Y peut être présente dans la variable d’environnement COPYCMD.
+Outrepassez ceci en utilisant /-Y dans la ligne de commandes. Par défaut, une
+demande de confirmation apparaît sauf si la commande MOVE est exécutée depuis
+un script de commandes.
+d:\TP_CMD>help prompt
+Change l’invite de commande cmd.exe.
+
+PROMPT [texte]
+
+  texte   Spécifie une nouvelle invite de commande.
+
+L’invite peut être composée de caractères normaux et des codes spéciaux suivants :
+
+  $A     & (esperluette)
+  $B     | (barre verticale)
+  $C     ( (parenthèse gauche)
+  $D     date actuelle
+  $E     code ECHAP (code ASCII 27)
+  $F     ) (parenthèse droite)
+  $G     > (signe supérieur)
+  $H     retour arrière (efface le caractère précédent)
+  $L     < (signe inférieur)
+  $N     lecteur en cours
+  $P     lecteur et chemin d’accès en cours
+  $Q     = (signe égal)
+  $S     (espace)
+  $T     heure actuelle
+  $V     numéro de version de Windows
+  $_     retour chariot et saut de ligne
+  $$     $ (signe dollar)
+
+Si les extensions de commandes sont activées, la commande PROMPT prend en
+charge les caractères de mise en forme suivants :
+
+  $+  Zéro ou plus de signes plus (+), en fonction de la profondeur de
+      la pile de répertoires PUSHD, un caractère par niveau.
+
+  $M  Affiche le nom distant associé à la lettre de lecteur actuelle
+      ou une chaîne vide si le lecteur n’est pas un lecteur réseau.
+
+d:\TP_CMD>prompt salut$G
+
+salut>prompt
+
+d:\TP_CMD>help set
+Affiche, fixe ou supprime des variables d’environnement de cmd.exe.
+
+SET [variable=[chaîne]]
+
+  variable  Nom de la variable d’environnement.
+  chaîne    Chaîne de caractères à affecter à la variable.
+
+SET sans paramètres affiche les variables d’environnement définies.
+........
+
+d:\TP_CMD>set /P var6="Entrez la valeur"
+Entrez la valeur78
+
+d:\TP_CMD>set var6
+var6=78
+
+d:\TP_CMD>echo %var6%
+78
+
+d:\TP_CMD>help ping
+Cette commande n’est pas prise en charge par l’utilitaire d’aide. Essayez
+"ping /?".
+
+d:\TP_CMD>ping /?
+
+Utilisation : ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] nom_cible
+..........
+d:\TP_CMD>

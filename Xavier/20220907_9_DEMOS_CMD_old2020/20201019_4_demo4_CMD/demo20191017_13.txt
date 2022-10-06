@@ -1,0 +1,303 @@
+Microsoft Windows [version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. Tous droits réservés.
+
+d:\TP_DOS>c:
+
+C:\>
+C:\>d:
+
+d:\TP_DOS>
+d:\TP_DOS>cd ..
+
+d:\>
+d:\>help
+Pour plus d’informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+......................
+Pour obtenir plus d'informations sur les outils, consultez la référence de
+commande en ligne dans l'aide en ligne.
+
+d:\>help cd
+Affiche le nom ou change le répertoire en cours.
+
+CHDIR [/D] [lecteur:][chemin]
+..........................
+
+d:\>help mkdir
+Crée un répertoire.
+
+MKDIR [lecteur:]chemin
+MD [lecteur:]chemin
+.........................
+d:\>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\
+
+11/10/2019  13:38    <DIR>          00_deroule_photos-tableau_CDI20181029
+15/10/2019  23:45    <DIR>          abc_05_ACCUEIL
+.........................
+
+d:\>dir TP_DOS
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  12:38    <DIR>          .
+16/10/2019  12:38    <DIR>          ..
+               0 fichier(s)                0 octets
+               2 Rép(s)  253 858 230 272 octets libres
+
+d:\>cd TP_DOS
+
+d:\TP_DOS>
+d:\TP_DOS>echo > f1
+
+d:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  14:39    <DIR>          .
+16/10/2019  14:39    <DIR>          ..
+16/10/2019  14:39                24 f1
+               1 fichier(s)               24 octets
+               2 Rép(s)  253 858 230 272 octets libres
+
+d:\TP_DOS>
+d:\TP_DOS>c:
+
+C:\>d:
+
+d:\TP_DOS>
+d:\TP_DOS>mkdir r1
+
+d:\TP_DOS>mkdir r2
+
+d:\TP_DOS>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS
+
+16/10/2019  14:43    <DIR>          .
+16/10/2019  14:43    <DIR>          ..
+16/10/2019  14:39                24 f1
+16/10/2019  14:42    <DIR>          r1
+16/10/2019  14:43    <DIR>          r2
+               1 fichier(s)               24 octets
+               4 Rép(s)  253 858 230 272 octets libres
+
+d:\TP_DOS>cd r2
+
+d:\TP_DOS\r2>cd ..\r3
+Le chemin d’accès spécifié est introuvable.
+
+d:\TP_DOS\r2>cd ..\r2
+
+d:\TP_DOS\r2>
+d:\TP_DOS\r2>cd ..\r1
+
+d:\TP_DOS\r1>cd ..\..
+
+d:\>
+d:\>cd TP_DOS
+
+d:\TP_DOS>type f1
+Commande ECHO activée.
+
+d:\TP_DOS>echo nul >f3
+
+d:\TP_DOS>type f3
+nul
+
+d:\TP_DOS>
+d:\TP_DOS>edit f4
+'edit' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+d:\TP_DOS>
+d:\TP_DOS>cd ..
+
+d:\>tree
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+├───00_deroule_photos-tableau_CDI20181029
+│   ├───20181025_sem0_prepaPosteStagiaire_InstallationDe-ImageAcronis
+.....................
+
+d:\>tree TP_DOS
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:\TP_DOS
+├───r1
+└───r2
+
+d:\>help tree
+Affiche graphiquement la structure de dossiers d’un lecteur ou d’un chemin.
+
+TREE [lecteur:][chemin] [/F] [/A]
+
+   /F   Affiche le nom des fichiers de chaque répertoire.
+   /A   Utilise ASCII au lieu des caractères étendus.
+
+
+d:\>tree /F TP_DOS
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:\TP_DOS
+│   f1
+│   f2
+│   f3
+│
+├───r1
+└───r2
+
+d:\>title > f5
+
+d:\>
+d:\>cd TP_DOS
+
+d:\TP_DOS>
+d:\TP_DOS>title > f5
+
+d:\TP_DOS>help title
+Définit le titre de la fenêtre pour une fenêtre DOS.
+
+TITLE [chaîne]
+
+  chaîne     Titre de la fenêtre DOS.
+
+d:\TP_DOS>mkdir /?
+Crée un répertoire.
+
+MKDIR [lecteur:]chemin
+MD [lecteur:]chemin
+........................
+
+d:\TP_DOS>help del
+Supprime un ou plusieurs fichiers.
+
+DEL [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+ERASE [/P] [/F] [/S] [/Q] [/A[[:]attributes]] names
+
+  names         Spécifie une liste d'un ou plusieurs fichiers ou répertoires.
+                Les caractères génériques peuvent être utilisés pour supprimer plusieurs fichiers. Si un
+                répertoire est spécifié, tous les fichiers du répertoire
+                seront supprimés.
+
+  /P            Demande une confirmation avant de supprimer chaque fichier.
+  /F            Force la suppression des fichiers en lecture seule.
+  /S            Supprime les fichiers spécifiés de tous les sous-répertoires.
+  /Q            Mode silencieux, ne demande pas l'autorisation de supprimer sur le caractère générique global
+...................
+
+d:\TP_DOS>help undelete
+Cette commande n’est pas prise en charge par l’utilitaire d’aide. Essayez
+"undelete /?".
+
+d:\TP_DOS>del f3
+
+d:\TP_DOS>delete f2
+'delete' n’est pas reconnu en tant que commande interne
+ou externe, un programme exécutable ou un fichier de commandes.
+
+d:\TP_DOS>path
+PATH=C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;
+
+d:\TP_DOS>help
+............
+
+d:\TP_DOS>help > help.txt
+
+d:\TP_DOS>
+d:\TP_DOS>copy con f7
+azerty
+azerty
+lkjlkjljlkjl
+lkjlkjljlkjl
+
+
+lkjlkjlkjlkj^Z
+
+d:\TP_DOS>help move
+Déplace des fichiers et renomme des fichiers et répertoires.
+
+Pour déplacer un ou plusieurs fichiers :
+MOVE [/Y | /-Y] [lecteur:][chemin]fichier1[,...] destination
+
+Pour renommer un répertoire:
+MOVE [/Y | /-Y] [lecteur:][chemin]répert1 répertoire2
+.....................
+
+d:\TP_DOS>
+d:\TP_DOS>move f1 r1
+        1 fichier(s) déplacé(s).
+		
+d:\TP_DOS>move f2 r1
+        1 fichier(s) déplacé(s).
+
+d:\TP_DOS>
+d:\TP_DOS>cd r1
+
+d:\TP_DOS\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS\r1
+
+16/10/2019  15:26    <DIR>          .
+16/10/2019  15:26    <DIR>          ..
+16/10/2019  14:51                 4 f2
+               1 fichier(s)                4 octets
+               2 Rép(s)  253 858 222 080 octets libres
+
+d:\TP_DOS\r1>rename f2 f5
+
+d:\TP_DOS\r1>
+d:\TP_DOS\r1>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de d:\TP_DOS\r1
+
+16/10/2019  15:26    <DIR>          .
+16/10/2019  15:26    <DIR>          ..
+16/10/2019  14:51                 4 f5
+               1 fichier(s)                4 octets
+               2 Rép(s)  253 858 222 080 octets libres
+
+d:\TP_DOS\r1>cd ..
+
+d:\TP_DOS>tree /f
+Structure du dossier pour le volume DATA
+Le numéro de série du volume est AC59-0CCB
+D:.
+│   demo1.txt
+│   f1
+│   f5
+│   f7
+│   f8
+│   help.txt
+│
+├───r1
+│       f5
+│
+└───r2
+
+d:\TP_DOS>
+d:\TP_DOS>set
+
+d:\TP_DOS>echo %USERNAME%
+xav
+
+d:\TP_DOS>echo USERNAME
+USERNAME
+
+d:\TP_DOS>help md
+Crée un répertoire.
+......................

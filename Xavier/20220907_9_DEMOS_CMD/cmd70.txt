@@ -1,0 +1,10 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>cd ..
+
+C:\Users>cd \
+
+C:\>dir
+ Le volume dans le lecteur C s’appelle OS_SSD
+ Le numéro de série du volume est 1A25-9C31

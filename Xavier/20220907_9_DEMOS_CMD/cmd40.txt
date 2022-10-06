@@ -1,0 +1,669 @@
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+C:\Users\xav>d:
+
+D:\>cd TP_CMD
+
+D:\TP_CMD>cd ..
+
+D:\>cd TP_CMD
+
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>help cmd
+Démarre une nouvelle instance de l’interpréteur de commandes de Windows
+
+CMD [/A | /U] [/Q] [/D] [/E:ON | /E:OFF] [/F:ON | /F:OFF] [/V:ON | /V:OFF]
+    [[/S] [/C | /K] chaîne]
+
+/C      Exécute la commande donnée par la chaîne de caractères puis se termine.
+/K      Exécute la commande donnée par la chaîne de caractères et reste actif.
+/S      Modifie le traitement de la chaîne après /C ou /K (voir ci-dessous).
+/Q      Exécute (sans interactions) la commande donnée puis reste actif.
+/D      Désactive l’exécution d’AutoRun à partir du Registre (voir ci-dessous).
+/A      Redirige la sortie de commandes internes vers un canal ou un fichier
+        ANSI.
+/U      Redirige la sortie de commandes internes vers un canal ou un fichier
+        UNICODE.
+/T:fg   Change la couleur du premier plan ou de l’arrière-plan (voir aussi
+        COLOR /?).
+Appuyez sur une touche pour continuer...
+
+
+
+
+
+
+
+
+
+/E:ON   Active les extensions de commande (voir ci-dessous).
+/E:OFF  Désactive les extensions de commande (voir ci-dessous).
+/F:ON   Active les caractères de fin des noms de fichiers et de répertoires
+        (voir ci-dessous).
+/F:OFF  Désactive les caractères de fin des noms de fichiers et de répertoires
+        (voir ci-dessous).
+/V:ON   Active l’expansion retardée des variables d’environnement en utilisant
+        ! comme délimiteur. Par exemple, /V:ON permet à !var! de développer la
+        variable var à l’exécution. La syntaxe var développe les variables
+        lorsqu’elles sont entrées, ce qui est différent lorsque utilisé à
+        l’intérieur d’une boucle FOR.
+/V:OFF  Désactive l’expansion retardée des variables d’environnement.
+
+Remarquez que des commandes multiples séparées par le séparateur « && » sont
+acceptées comme une chaîne si elles sont entre guillemets. Pour des raisons de
+compatibilité, /X est identique à /E:ON, /Y à /E:OFF et /R
+à /C. Toute autre option est ignorée.
+
+Si /C ou /K est indiqué, alors le reste de la ligne de commande est traité
+avec la logique suivante pour prendre en compte les guillemets (") :
+
+    1.  Si toutes les conditions suivantes sont respectées, alors les
+        guillemets de la ligne de commande sont conservés :
+
+        - pas d’option /S
+        - exactement deux caractères guillemet
+        - aucun caractère spécial entre les deux caractères guillemet, un
+          caractère spécial étant : &<>()@^|
+        - un ou plusieurs espaces entre les deux caractères guillemet
+        - la chaîne comprise entre les deux guillemets est le nom d’un fichier
+          exécutable.
+
+    2.  Dans le cas contraire, l’ancien comportement vérifiera si le premier
+        caractère est un caractère guillemet et si tel est le cas, enlèvera le
+        premier caractère et le dernier caractère guillemet de la ligne de
+        commande, préservant tout texte se trouvant après le dernier caractère
+        guillemet.
+
+Si /D n’a PAS été spécifié dans la ligne de commande, alors CMD.EXE démarrera
+en recherchant les variables du Registre REG_SZ/REG_EXPAND_SZ suivantes et
+si l’une ou les deux sont présentes, elles seront exécutées en priorité.
+
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun
+
+        et/ou
+
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun
+
+Les extensions de commandes sont activées par défaut. Vous pouvez
+également les désactiver pour une exécution particulière en utilisant
+l’option /E:OFF. Vous pouvez les activer ou désactiver pour toutes les
+exécutions de CMD.EXE sur une machine ou pour un utilisateur en
+fixant l’une ou les deux valeurs REG_DWORD suivantes du Registre :
+
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\EnableExtensions
+
+        et/ou
+
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions
+
+à 0x1 ou 0x0 (en utilisant REGEDIT.EXE). Les paramètres spécifiques de
+l’utilisateur sont prioritaires sur ceux de la machine. Les options de la
+ligne de commande ont préséance sur les paramètres du Registre.
+
+Dans un fichier de commandes, les arguments SETLOCAL ENABLEEXTENSIONS ou
+DISABLEEXTENSIONS ont priorité sur l’option /E:ON ou /E:OFF. Voir SETLOCAL /?
+pour plus d’informations.
+
+Les extensions de commandes impliquent des modifications ou des additions dans
+les commandes suivantes :
+
+    DEL ou ERASE
+    COLOR
+    CD ou CHDIR
+    MD ou MKDIR
+    PROMPT
+    PUSHD
+    POPD
+    SET
+    SETLOCAL
+    ENDLOCAL
+    IF
+    FOR
+    CALL
+    SHIFT
+    GOTO
+    START (inclut également des modifications dans l’appel externe de commande)
+    ASSOC
+    FTYPE
+
+Pour obtenir des détails spécifiques, entrez /? Nom_de_commande.
+
+L’expansion retardée de variables d’environnement n’est PAS activée par
+défaut. Vous pouvez l’activer ou la désactiver pour une utilisation
+particulière de CMD.EXE avec l’option /V:ON ou /V:OFF. Vous pouvez activer
+ou désactiver l’expansion retardée pour toute utilisation de CMD.EXE sur un
+ordinateur ou pour un utilisateur en fixant avec REGEDIT.EXE l’une ou les
+deux valeurs REG_DWORD suivantes du Registre :
+
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\DelayedExpansion
+
+        et/ou
+
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DelayedExpansion
+
+à la valeur 0x1 ou 0x0. Les paramètres spécifiques à l’utilisateur sont
+prioritaires sur les paramètres de l’ordinateur. Les options de la ligne
+de commande ont priorité sur les paramètres du Registre.
+
+Dans un fichier de commandes, les arguments SETLOCAL ENABLEDELAYEDEXPANSION ou
+DISABLEDELAYEDEXPANSION ont priorité sur l’option /V:ON ou /V:OFF. Entrez
+SETLOCAL /? pour plus d’informations.
+
+Si l’expansion retardée de variables d’environnement est activée, un point
+d’exclamation peut être utilisé pour remplacer la valeur d’une variable
+d’environnement lors de l’exécution.
+
+Vous pouvez activer ou désactiver la terminaison des noms de fichiers pour
+une instance particulière de CMD.EXE avec l’option /V:ON ou /V:OFF. Vous
+pouvez l’activer ou la désactiver pour toutes les instances de CMD.EXE sur un
+ordinateur et/ou pour une ouverture de session utilisateur en fixant avec
+REGEDIT.EXE l’une ou les deux valeurs REG_DWORD suivantes du Registre :
+
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar
+    HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\PathCompletionChar
+
+        et/ou
+
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\CompletionChar
+    HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar
+
+à la valeur hexadécimale d’un caractère de contrôle à utiliser pour une
+fonction particulière (par exemple : 0x4 représente Ctrl+D et 0x6, Ctrl+F).
+Les paramètres spécifiques de l’utilisateur sont prioritaires sur ceux de
+l’ordinateur. Les options de la ligne de commande ont préséance sur les
+paramètres du Registre.
+
+Si la terminaison est activée avec l’option /F:ON, les deux caractères de
+contrôle utilisés sont Ctrl+D pour la terminaison des noms de répertoire et
+Ctrl+F pour la terminaison des noms de fichiers. Pour désactiver un caractère
+de terminaison particulier dans le Registre, utilisez la valeur pour l’espace
+(0x20) qui n’est pas valide en tant que caractère de contrôle.
+
+La terminaison est appelée lorsque vous entrez l’un des deux caractères de
+contrôle. La fonction de terminaison prend le chemin figurant à gauche du
+curseur, y ajoute un caractère générique s’il n’y en a pas déjà et crée une
+liste des chemins correspondants. Cette fonction affiche ensuite le premier
+chemin de la liste. Si aucun chemin ne correspond, elle émet un son et
+n’affiche rien. Ensuite, si vous pressez le même caractère de contrôle
+plusieurs fois, vous verrez les chemins successifs correspondants de la liste
+précédente. Si vous appuyez sur la touche Majuscule et le caractère de
+contrôle, vous verrez la liste dans le sens contraire. Si vous modifiez la
+ligne de quelque façon que ce soit et appuyez à nouveau sur le caractère de
+contrôle, la liste enregistrée de chemins correspondants est ignorée et une
+nouvelle liste est générée. De même, une nouvelle liste sera créée si vous
+passez de la terminaison des noms de fichiers à celle des noms de répertoires.
+La seule différence entre les deux caractères de contrôle est que la
+terminaison des noms de fichiers fonctionne pour les noms de fichiers et les
+noms de répertoires alors que la terminaison des noms de répertoires ne
+fonctionne que pour les noms de répertoires. Si la terminaison des noms de
+fichiers est utilisée sur des commandes de répertoires internes (CD, MD ou RD)
+alors la terminaison des noms de répertoires est active.
+
+Le code de terminaison traite correctement les noms de fichiers contenant des
+espaces ou d’autres caractères spéciaux, en plaçant des guillemets autour des
+chemins correspondants. Si vous reculez le curseur et appelez ensuite la
+terminaison, le texte à droite du curseur lorsque la terminaison est demandée
+est ignoré.
+
+Les caractères spéciaux qui requièrent des guillemets sont :
+ <espace>
+ &()[]{}^=;!'+,`~
+
+D:\TP_CMD> help
+Pour plus d’informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+ASSOC          Affiche ou modifie les applications associées aux extensions de
+               fichiers.
+ATTRIB         Affiche ou modifie les attributs d’un fichier.
+BREAK          Active ou désactive le contrôle étendu de CTRL+C.
+BCDEDIT        Définit les propriétés dans la base de données de démarrage pour
+               le contrôle du chargement d’amorçage.
+CACLS          Affiche ou modifie les listes de contrôles d’accès aux fichiers.
+CALL           Appelle un fichier de commandes à partir d’un autre fichier de
+               commandes.
+CD             Modifie le répertoire ou affiche le répertoire actif.
+CHCP           Modifie ou affiche le numéro de la page de code active.
+CHDIR          Modifie le répertoire ou affiche le nom du répertoire actif.
+CHKDSK         Vérifie un disque et affiche un rapport d’état.
+CHKNTFS        Affiche ou modifie la vérification du disque au démarrage.
+CLS            Efface l’écran.
+CMD            Exécute une nouvelle instance de l’interpréteur de commandes de
+               Windows.
+COLOR          Modifie les couleurs du premier plan et de l’arrière-plan de la
+               console.
+COMP           Compare les contenus de deux fichiers ou groupes de fichiers.
+COMPACT        Modifie ou affiche la compression des fichiers sur une
+               partition NTFS.
+CONVERT        Convertit des volumes FAT en volumes NTFS. Vous ne pouvez pas
+               convertir le lecteur en cours d’utilisation.
+COPY           Copie un ou plusieurs fichiers.
+DATE           Affiche ou définit la date.
+DEL            Supprime un ou plusieurs fichiers.
+DIR            Affiche la liste des fichiers et des sous-répertoires d’un
+               répertoire.
+DISKPART       Affiche ou configure les propriétés d'une partition de disque.
+DOSKEY         Modifie les lignes de commande, rappelle des commandes Windows,
+               et crée des macros.
+DRIVERQUERY    Affiche l'état et les propriétés du pilote de périphérique en
+               cours d'utilisation.
+ECHO           Affiche des messages ou active/désactive l'affichage des
+               commandes.
+ENDLOCAL       Stoppe la localisation des modifications d'environnement dans
+               un fichier de commandes.
+ERASE          Supprime un ou plusieurs fichiers.
+EXIT           Quitte l'interpréteur de commandes (CMD.EXE).
+FC             Compare deux fichiers ou groupes de fichiers et affiche
+               les différences.
+FIND           Recherche une chaîne de caractères dans un ou plusieurs
+               fichiers.
+FINDSTR        Cherche des chaînes dans les fichiers.
+FOR            Exécute une commande sur chaque fichier d'un ensemble de
+               fichiers.
+FORMAT         Formate un disque devant être utilisé avec Windows.
+FSUTIL         Affiche ou configure les propriétés du système de fichiers.
+FTYPE          Affiche ou modifie les types de fichiers utilisés dans les
+               associations d'extensions.
+GOTO           Indique l'exécution d'un fichier de commandes pour une ligne
+               identifiée par une étiquette.
+GPRESULT       Affiche les informations de stratégie de groupe pour un
+               ordinateur ou un utilisateur.
+GRAFTABL       Permet à Windows d'afficher un jeu de caractères en
+               mode graphique.
+HELP           Affiche des informations sur les commandes de Windows.
+ICACLS         Afficher, modifier, sauvegarder ou restaurer les listes de
+               contrôle d'accès pour les fichiers et les répertoires.
+IF             Effectue un traitement conditionnel dans un fichier de
+               commandes.
+LABEL          Crée, modifie ou supprime le nom de volume d'un disque.
+MD             Crée un répertoire.
+MKDIR          Crée un répertoire.
+MKLINK         Créer des liens symboliques et des liens physiques
+MODE           Configure un périphérique du système.
+MORE           Affiche la sortie écran par écran.
+MOVE           Déplace un ou plusieurs fichiers d'un répertoire
+               à un autre.
+OPENFILES      Affiche les fichiers partagés ouverts à distance par les
+               utilisateurs.
+PATH           Affiche ou définit le chemin de recherche des fichiers
+               exécutables.
+PAUSE          Interrompt l'exécution d'un fichier de commandes et affiche un
+               message.
+POPD           Restaure la valeur précédente du répertoire actif enregistrée
+               par PUSHD.
+PRINT          Imprime un fichier texte.
+PROMPT         Modifie l'invite de commande de Windows.
+PUSHD          Enregistre le répertoire actif puis le modifie.
+RD             Supprime un répertoire.
+RECOVER        Récupère l'information lisible d'un disque défectueux.
+REM            Insère un commentaire dans un fichier de commandes ou
+               CONFIG.SYS.
+REN            Renomme un ou plusieurs fichiers.
+RENAME         Renomme un ou plusieurs fichiers.
+REPLACE        Remplace des fichiers.
+RMDIR          Supprime un répertoire.
+ROBOCOPY       Utilitaire avancé pour copier les fichiers et les
+               arborescences de répertoires
+SET            Affiche, définit ou supprime des variables d'environnement
+               Windows.
+SETLOCAL       Commence la localisation des modifications d'environnement dans
+               un fichier de commandes.
+SC             Affiche ou configure les services (processus en arrière-plan).
+SCHTASKS       Planifie les commandes et les programmes à exécuter sur
+               l'ordinateur.
+SHIFT          Modifie la position des paramètres remplaçables dans un fichier
+               de commandes.
+SHUTDOWN       Permet un arrêt local ou distant correct de l'ordinateur.
+SORT           Trie les entrées.
+START          Ouvre une fenêtre séparée pour l'exécution d'un programme ou
+               d'une commande spécifique.
+SUBST          Associe un chemin d'accès à une lettre de lecteur.
+SYSTEMINFO     Affiche les propriétés et la configuration spécifiques de
+               l'ordinateur.
+TASKLIST       Affiche toutes les tâches en cours d'exécution, y compris les
+               services.
+TASKKILL       Termine ou interrompt un processus ou une application en cours
+               d'exécution.
+TIME           Affiche ou définit l'heure du système.
+TITLE          Définit le titre de la fenêtre pour une session CMD.EXE.
+TREE           Affiche le graphisme de la structure de répertoire d'un lecteur
+               ou d'un chemin d'accès.
+TYPE           Affiche le contenu d'un fichier texte.
+VER            Affiche la version de Windows.
+VERIFY         Demande à Windows de vérifier si vos fichiers sont
+               correctement écrits sur le disque.
+VOL            Affiche le nom et le numéro de série d'un volume de disque.
+XCOPY          Copie les fichiers et les arborescences de répertoires.
+WMIC           Affiche les informations WMI dans l'interface de commande
+               interactive.
+
+Pour obtenir plus d'informations sur les outils, consultez la référence de
+commande en ligne dans l'aide en ligne.
+
+D:\TP_CMD>help path
+Affiche ou définit un chemin de recherche des fichiers exécutables.
+
+PATH [[lecteur:]chemin[;...][;%PATH%]
+PATH ;
+
+Entrez PATH ; pour effacer les chemins de recherche et indiquer à cmd.exe
+de ne chercher que dans le répertoire en cours.
+Entrez PATH sans paramètres pour afficher le chemin de recherche en cours.
+L’ajout de %PATH% dans le paramètre du nouveau chemin permet d’ajouter
+celui-ci à l’ancien chemin de recherche.
+
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>set
+ALLUSERSPROFILE=C:\ProgramData
+ANT_HOME=C:\apache-ant-1.10.7
+APPDATA=C:\Users\xav\AppData\Roaming
+CATALINA_HOME=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=APIXHR6
+ComSpec=C:\WINDOWS\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+HOMEDRIVE=C:
+HOMEPATH=\Users\xav
+IntelliJ IDEA Community Edition=F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;
+JAVA_HOME=C:\jdk-11.0.5
+LOCALAPPDATA=C:\Users\xav\AppData\Local
+LOGONSERVER=\\APIXHR6
+MAVAR=coucou
+NUMBER_OF_PROCESSORS=4
+OneDrive=C:\Users\xav\OneDrive
+ORACLE_HOME=F:\app\xav\product\21c\dbhomeXE
+OS=Windows_NT
+Path=F:\app\xav\product\21c\dbhomeXE\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Common Files\IDRS\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\7-Zip;C:\jdk-11.0.5\bin;C:\apache-ant-1.10.7\bin;F:\app\xav\product\21c\dbhomeXE\bin;D:\TP_CMD;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;;F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8e0a
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+SESSIONNAME=Console
+SystemDrive=C:
+SystemRoot=C:\WINDOWS
+TEMP=C:\Users\xav\AppData\Local\Temp
+TMP=C:\Users\xav\AppData\Local\Temp
+TP_HOME=D:\TP_CMD
+USERDOMAIN=APIXHR6
+USERDOMAIN_ROAMINGPROFILE=APIXHR6
+USERNAME=xav
+USERPROFILE=C:\Users\xav
+windir=C:\WINDOWS
+
+D:\TP_CMD>set maVar=678
+
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>set maVar
+MAVAR=678
+
+D:\TP_CMD>set MAVAR= 962
+
+D:\TP_CMD>set maVar
+MAVAR= 962
+
+D:\TP_CMD>set maVar=
+
+D:\TP_CMD>set maVar
+La variable d’environnement maVar n’est pas définie.
+
+D:\TP_CMD>set
+ALLUSERSPROFILE=C:\ProgramData
+ANT_HOME=C:\apache-ant-1.10.7
+APPDATA=C:\Users\xav\AppData\Roaming
+CATALINA_HOME=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=APIXHR6
+ComSpec=C:\WINDOWS\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+HOMEDRIVE=C:
+HOMEPATH=\Users\xav
+IntelliJ IDEA Community Edition=F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;
+JAVA_HOME=C:\jdk-11.0.5
+LOCALAPPDATA=C:\Users\xav\AppData\Local
+LOGONSERVER=\\APIXHR6
+NUMBER_OF_PROCESSORS=4
+OneDrive=C:\Users\xav\OneDrive
+ORACLE_HOME=F:\app\xav\product\21c\dbhomeXE
+OS=Windows_NT
+Path=F:\app\xav\product\21c\dbhomeXE\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Rational\common;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Common Files\IDRS\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\7-Zip;C:\jdk-11.0.5\bin;C:\apache-ant-1.10.7\bin;F:\app\xav\product\21c\dbhomeXE\bin;D:\TP_CMD;C:\Users\xav\AppData\Local\Microsoft\WindowsApps;;F:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.1\bin;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=8e0a
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+SESSIONNAME=Console
+SystemDrive=C:
+SystemRoot=C:\WINDOWS
+TEMP=C:\Users\xav\AppData\Local\Temp
+TMP=C:\Users\xav\AppData\Local\Temp
+TP_HOME=D:\TP_CMD
+USERDOMAIN=APIXHR6
+USERDOMAIN_ROAMINGPROFILE=APIXHR6
+USERNAME=xav
+USERPROFILE=C:\Users\xav
+windir=C:\WINDOWS
+
+D:\TP_CMD>set MAVAR= 962
+
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>cmd
+Microsoft Windows [version 10.0.19044.1889]
+(c) Microsoft Corporation. Tous droits réservés.
+
+D:\TP_CMD>set MAVAR
+MAVAR= 962
+
+D:\TP_CMD>exit
+
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>echo coucou
+coucou
+
+D:\TP_CMD>echo %MAVAR%
+ 962
+
+D:\TP_CMD>echo MAVAR
+MAVAR
+
+D:\TP_CMD>help
+Pour plus d’informations sur une commande spécifique, entrez HELP
+suivi de la commande.
+ASSOC          Affiche ou modifie les applications associées aux extensions de
+               fichiers.
+ATTRIB         Affiche ou modifie les attributs d’un fichier.
+BREAK          Active ou désactive le contrôle étendu de CTRL+C.
+BCDEDIT        Définit les propriétés dans la base de données de démarrage pour
+               le contrôle du chargement d’amorçage.
+CACLS          Affiche ou modifie les listes de contrôles d’accès aux fichiers.
+CALL           Appelle un fichier de commandes à partir d’un autre fichier de
+               commandes.
+CD             Modifie le répertoire ou affiche le répertoire actif.
+CHCP           Modifie ou affiche le numéro de la page de code active.
+CHDIR          Modifie le répertoire ou affiche le nom du répertoire actif.
+CHKDSK         Vérifie un disque et affiche un rapport d’état.
+CHKNTFS        Affiche ou modifie la vérification du disque au démarrage.
+CLS            Efface l’écran.
+CMD            Exécute une nouvelle instance de l’interpréteur de commandes de
+               Windows.
+COLOR          Modifie les couleurs du premier plan et de l’arrière-plan de la
+               console.
+COMP           Compare les contenus de deux fichiers ou groupes de fichiers.
+COMPACT        Modifie ou affiche la compression des fichiers sur une
+               partition NTFS.
+CONVERT        Convertit des volumes FAT en volumes NTFS. Vous ne pouvez pas
+               convertir le lecteur en cours d’utilisation.
+COPY           Copie un ou plusieurs fichiers.
+DATE           Affiche ou définit la date.
+DEL            Supprime un ou plusieurs fichiers.
+DIR            Affiche la liste des fichiers et des sous-répertoires d’un
+               répertoire.
+DISKPART       Affiche ou configure les propriétés d'une partition de disque.
+DOSKEY         Modifie les lignes de commande, rappelle des commandes Windows,
+               et crée des macros.
+DRIVERQUERY    Affiche l'état et les propriétés du pilote de périphérique en
+               cours d'utilisation.
+ECHO           Affiche des messages ou active/désactive l'affichage des
+               commandes.
+ENDLOCAL       Stoppe la localisation des modifications d'environnement dans
+               un fichier de commandes.
+ERASE          Supprime un ou plusieurs fichiers.
+EXIT           Quitte l'interpréteur de commandes (CMD.EXE).
+FC             Compare deux fichiers ou groupes de fichiers et affiche
+               les différences.
+FIND           Recherche une chaîne de caractères dans un ou plusieurs
+               fichiers.
+FINDSTR        Cherche des chaînes dans les fichiers.
+FOR            Exécute une commande sur chaque fichier d'un ensemble de
+               fichiers.
+FORMAT         Formate un disque devant être utilisé avec Windows.
+FSUTIL         Affiche ou configure les propriétés du système de fichiers.
+FTYPE          Affiche ou modifie les types de fichiers utilisés dans les
+               associations d'extensions.
+GOTO           Indique l'exécution d'un fichier de commandes pour une ligne
+               identifiée par une étiquette.
+GPRESULT       Affiche les informations de stratégie de groupe pour un
+               ordinateur ou un utilisateur.
+GRAFTABL       Permet à Windows d'afficher un jeu de caractères en
+               mode graphique.
+HELP           Affiche des informations sur les commandes de Windows.
+ICACLS         Afficher, modifier, sauvegarder ou restaurer les listes de
+               contrôle d'accès pour les fichiers et les répertoires.
+IF             Effectue un traitement conditionnel dans un fichier de
+               commandes.
+LABEL          Crée, modifie ou supprime le nom de volume d'un disque.
+MD             Crée un répertoire.
+MKDIR          Crée un répertoire.
+MKLINK         Créer des liens symboliques et des liens physiques
+MODE           Configure un périphérique du système.
+MORE           Affiche la sortie écran par écran.
+MOVE           Déplace un ou plusieurs fichiers d'un répertoire
+               à un autre.
+OPENFILES      Affiche les fichiers partagés ouverts à distance par les
+               utilisateurs.
+PATH           Affiche ou définit le chemin de recherche des fichiers
+               exécutables.
+PAUSE          Interrompt l'exécution d'un fichier de commandes et affiche un
+               message.
+POPD           Restaure la valeur précédente du répertoire actif enregistrée
+               par PUSHD.
+PRINT          Imprime un fichier texte.
+PROMPT         Modifie l'invite de commande de Windows.
+PUSHD          Enregistre le répertoire actif puis le modifie.
+RD             Supprime un répertoire.
+RECOVER        Récupère l'information lisible d'un disque défectueux.
+REM            Insère un commentaire dans un fichier de commandes ou
+               CONFIG.SYS.
+REN            Renomme un ou plusieurs fichiers.
+RENAME         Renomme un ou plusieurs fichiers.
+REPLACE        Remplace des fichiers.
+RMDIR          Supprime un répertoire.
+ROBOCOPY       Utilitaire avancé pour copier les fichiers et les
+               arborescences de répertoires
+SET            Affiche, définit ou supprime des variables d'environnement
+               Windows.
+SETLOCAL       Commence la localisation des modifications d'environnement dans
+               un fichier de commandes.
+SC             Affiche ou configure les services (processus en arrière-plan).
+SCHTASKS       Planifie les commandes et les programmes à exécuter sur
+               l'ordinateur.
+SHIFT          Modifie la position des paramètres remplaçables dans un fichier
+               de commandes.
+SHUTDOWN       Permet un arrêt local ou distant correct de l'ordinateur.
+SORT           Trie les entrées.
+START          Ouvre une fenêtre séparée pour l'exécution d'un programme ou
+               d'une commande spécifique.
+SUBST          Associe un chemin d'accès à une lettre de lecteur.
+SYSTEMINFO     Affiche les propriétés et la configuration spécifiques de
+               l'ordinateur.
+TASKLIST       Affiche toutes les tâches en cours d'exécution, y compris les
+               services.
+TASKKILL       Termine ou interrompt un processus ou une application en cours
+               d'exécution.
+TIME           Affiche ou définit l'heure du système.
+TITLE          Définit le titre de la fenêtre pour une session CMD.EXE.
+TREE           Affiche le graphisme de la structure de répertoire d'un lecteur
+               ou d'un chemin d'accès.
+TYPE           Affiche le contenu d'un fichier texte.
+VER            Affiche la version de Windows.
+VERIFY         Demande à Windows de vérifier si vos fichiers sont
+               correctement écrits sur le disque.
+VOL            Affiche le nom et le numéro de série d'un volume de disque.
+XCOPY          Copie les fichiers et les arborescences de répertoires.
+WMIC           Affiche les informations WMI dans l'interface de commande
+               interactive.
+
+Pour obtenir plus d'informations sur les outils, consultez la référence de
+commande en ligne dans l'aide en ligne.
+
+D:\TP_CMD>
+D:\TP_CMD>
+D:\TP_CMD>dir
+ Le volume dans le lecteur D s’appelle DATA
+ Le numéro de série du volume est AC59-0CCB
+
+ Répertoire de D:\TP_CMD
+
+07/09/2022  15:29    <DIR>          .
+07/09/2022  15:29    <DIR>          ..
+07/09/2022  15:28            28 275 cmd2.txt
+07/09/2022  15:29                52 essai1.bat
+07/09/2022  08:39                 0 monpremierfichier.txt
+07/09/2022  08:55    <DIR>          rep1
+               3 fichier(s)           28 327 octets
+               3 Rép(s)  49 570 000 896 octets libres
+
+D:\TP_CMD>essai1
+
+D:\TP_CMD>set maVar=678
+
+D:\TP_CMD>set maVar
+MAVAR=678
+
+D:\TP_CMD>D:
+
+D:\TP_CMD>cd \TP_CMD
+
+D:\TP_CMD>type essai1.bat
+
+set maVar=678
+set maVar
+D:
+cd \TP_CMD
+
+
+D:\TP_CMD>

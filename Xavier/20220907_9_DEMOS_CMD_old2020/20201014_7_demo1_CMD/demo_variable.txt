@@ -1,0 +1,71 @@
+Microsoft Windows [version 10.0.17763.107]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+C:\Users\01BB013>set
+ALLUSERSPROFILE=C:\ProgramData
+APPDATA=C:\Users\01BB013\AppData\Roaming
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=STA5284829
+ComSpec=C:\Windows\system32\cmd.exe
+DriverData=C:\Windows\System32\Drivers\DriverData
+HOMEDRIVE=C:
+HOMEPATH=\Users\01BB013
+LOCALAPPDATA=C:\Users\01BB013\AppData\Local
+LOGONSERVER=\\77011VMAD01
+NUMBER_OF_PROCESSORS=2
+OneDrive=C:\Users\01BB013\OneDrive
+OneDriveConsumer=C:\Users\01BB013\OneDrive
+OS=Windows_NT
+Path=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\01BB013\AppData\Local\Microsoft\WindowsApps;
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 10, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=170a
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+PUBLIC=C:\Users\Public
+SESSIONNAME=Console
+SystemDrive=C:
+SystemRoot=C:\Windows
+TEMP=C:\Users\01BB013\AppData\Local\Temp
+TMP=C:\Users\01BB013\AppData\Local\Temp
+UATDATA=C:\Windows\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77
+USERDNSDOMAIN=EXCHANGE.AD.AFPANET
+USERDOMAIN=EXCHANGE
+USERDOMAIN_ROAMINGPROFILE=EXCHANGE
+USERNAME=01BB013
+USERPROFILE=C:\Users\01BB013
+windir=C:\Windows
+
+C:\Users\01BB013>set mavar=toto
+
+C:\Users\01BB013>
+C:\Users\01BB013>set mavar
+mavar=toto
+
+C:\Users\01BB013>set mavar=123.89
+
+C:\Users\01BB013>set mavar
+mavar=123.89
+
+C:\Users\01BB013>echo %mavar%
+123.89
+
+C:\Users\01BB013>set mavar=%mavar%ABCD
+
+C:\Users\01BB013>set mavar
+mavar=123.89ABCD
+
+C:\Users\01BB013>set mavar=
+
+C:\Users\01BB013>set |find var
+FIND : format incorrect de paramètre
+
+C:\Users\01BB013>set | var

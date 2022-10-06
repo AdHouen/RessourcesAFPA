@@ -1,0 +1,62 @@
+Microsoft Windows [version 10.0.19043.1288]
+(c) Microsoft Corporation. Tous droits réservés.
+
+D:\TP_CMD>ipconfig /all
+
+.......
+
+D:\TP_CMD>ping 10.75.24.117
+
+Envoi d’une requête 'Ping'  10.75.24.117 avec 32 octets de données :
+Réponse de 10.75.25.111 : Impossible de joindre l’hôte de destination.
+Réponse de 10.75.25.111 : Impossible de joindre l’hôte de destination.
+Réponse de 10.75.25.111 : Impossible de joindre l’hôte de destination.
+Réponse de 10.75.25.111 : Impossible de joindre l’hôte de destination.
+
+Statistiques Ping pour 10.75.24.117:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+
+D:\TP_CMD>ping 10.75.24.14
+
+Envoi d’une requête 'Ping'  10.75.24.14 avec 32 octets de données :
+Réponse de 10.75.24.14 : octets=32 temps=1 ms TTL=64
+Réponse de 10.75.24.14 : octets=32 temps<1ms TTL=64
+Réponse de 10.75.24.14 : octets=32 temps=1 ms TTL=64
+Réponse de 10.75.24.14 : octets=32 temps=1 ms TTL=64
+
+Statistiques Ping pour 10.75.24.14:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 0ms, Maximum = 1ms, Moyenne = 0ms
+
+D:\TP_CMD>ping /?
+
+Utilisation : ping [-t] [-a] [-n count] [-l size] [-f] [-i TTL] [-v TOS]
+            [-r count] [-s count] [[-j host-list] | [-k host-list]]
+            [-w timeout] [-R] [-S srcaddr] [-c compartment] [-p]
+            [-4] [-6] nom_cible
+
+Options :
+    -t             Effectue un test ping sur l’hôte spécifié jusqu’à son arrêt.
+                   Pour afficher les statistiques et continuer,
+                   appuyez sur Ctrl+Attn.
+                   Pour arrêter, appuyez sur Ctrl+C.
+    -a             Résout les adresses en noms d’hôtes.
+
+D:\TP_CMD>hostname
+APIXHR6
+
+D:\TP_CMD>netstat -an|find "TCP"
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+
+
+D:\TP_CMD>netstat /?
+
+Affiche les statistiques de protocole et les connexions réseau TCP/IP actuelles
+
+NETSTAT [-a] [-b] [-e] [-f] [-n] [-o] [-p proto] [-r] [-s] [-t] [-x] [-y] [intervalle]
+
+D:\TP_CMD>
+
+VOIR AUSSI LA DOC MICROSOFT POUR LES EXEMPLES

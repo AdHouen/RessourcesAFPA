@@ -1,0 +1,10 @@
+Utiliser Ant (et le build.xml fourni) pour construire le projet
+Utiliser Ant pour lancer l'applicatif à partir des classes
+Utiliser Ant pour lancer l'applicatif à partir du JAR
+
+Ecrire un BAT pour lancer l'applicatif à partir des classes
+Ecrire un BAT pour lancer l'applicatif à partir du JAR
+
+Téléchargez le logiciel jxplorer présent dans les téléchargements lourds
+Installez-le et lancez-le
+Visualisez le manifest de l'archive principale

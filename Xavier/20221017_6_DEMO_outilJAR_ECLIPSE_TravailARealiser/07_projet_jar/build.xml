@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project default="build" basedir=".">
+	<property name="classes" location="${basedir}/classes" />
+	<property name="src" location="${basedir}/src" />
+	<property name="doc" location="${basedir}/doc" />
+	<property name="dist" location="${basedir}/dist" />
+	<path id="classpath">
+		<pathelement location="${classes}"/>
+		<pathelement location="${dist}"/>
+	</path>
+    <target name="init">
+		<echo message="structuration..."/>
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${doc}"/>
+		<mkdir dir="${dist}"/>
+	</target>
+	<target name="compile" depends="init">
+		<echo message="Compilation..."/>
+		<javac srcdir="${src}" destdir="${classes}"/>
+	</target>
+	<target name="doc" depends="init">
+		<echo message="Génération de la documentation..."/>
+		<javadoc sourcepath="${src}" destdir="${doc}"/>
+	</target>
+	<target name="packaging" depends="compile">
+		<echo message="Génération du fichier JAR..."/>
+		<jar jarfile="${dist}/demo4.jar" basedir="${classes}" manifest="manifest" />
+	</target> 
+	<target name="build" depends="doc, packaging">
+		<echo message="Projet DemoAnt créer."/>
+	</target>
+	
+	<!--target name="runclass" depends="compile">-->
+	<target name="runclass">
+		<java classname="biblio.metier.MonApp" fork="true">
+			<classpath>
+				<pathelement location="${classes}"/>
+			</classpath>
+		</java>
+	</target>
+	
+	<!--<target name="runjar" depends="build">-->
+	<target name="runjar">
+		<java jar="${dist}/demo4.jar" fork="true" />
+	</target>
+	<target name="clean">
+		<echo message="Nettoyage..."/>
+		<delete dir="${classes}" />
+		<delete dir="${doc}" />
+		<delete dir="${dist}" />
+	</target>
+</project> 

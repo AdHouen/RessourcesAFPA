@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Algo Darmangeat_Part01</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #17202A;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="color:#D0D3D4;font-family:prestige;font-size:90px;text-align:center" >Part01</h1>
+    <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_01</h2>
+    <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Quelles seront les valeurs des variables A et B après exécution des instructions suivantes ?<br />Variables A et B en Entier<br />Début<br />A
+        &lt;--1<br />B
+            &lt;--A+3<br />A
+                &lt;--3<br />Fin</p>
+    <p id="exo1" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo1Function()">Lancer</button></p>
+    <script>
+        function exo1Function() {
+            var a = 1;
+            console.log("première instruction, A=" + a);
+            var b = a + 3;
+            console.log("seconde instruction, B=" + b);
+            var a = 3;
+            console.log("dernière instruction, A=" + a);
+
+            document.getElementById("exo1").innerHTML = "les variables après éxécution sont A=" + a + " et B=" + b;
+        }
+    </script>
+    <p style="color:#D0D3D4;font-family:prestige;font-size:35px;text-align:center">
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_02</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Quelles seront les valeurs des variables A, B et C après exécution des instructions suivantes ?<br />Variables A,B et C en Entier<br />Début<br />A
+            &lt;--5<br />B
+                &lt;--3<br />C
+                    &lt;--A+B<br />A
+                        &lt;--2<br />C
+                            &lt;--B-A<br />Fin</p>
+        <p id="exo2" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo2Function()">Lancer</button></p>
+        <script>
+            function exo2Function() {
+                var a = 5;
+                console.log("première instruction, A=" + a);
+                var b = 3;
+                console.log("seconde instruction, B=" + b);
+                var c = a + b;
+                console.log("troisième instruction,C=" + c);
+                var a = 2;
+                console.log("quatrième instruction, A=" + a);
+                var c = b - a;
+                console.log("cinquième instruction,C=" + c);
+
+                document.getElementById("exo2").innerHTML = "les variables après éxécution sont A=" + a + " et B=" + b + " et C=" + c;
+            }
+        </script>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:35px;text-align:center"></p>
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_03</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Quelles seront les valeurs des variables A et B après exécution des instructions suivantes ?<br />Variables A, B en Entier<br />Début<br />A
+            &lt;--5<br />B
+                &lt;--A+4<br />A
+                    &lt;--A+1<br />B
+                        &lt;--A-4<br />Fin</p>
+        <p id="exo3" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo3Function()">Lancer</button></p>
+        <script>
+            function exo3Function() {
+                var a = 5;
+                console.log("première instruction, A=" + a);
+                var b = a + 4;
+                console.log("seconde instruction, B=" + b);
+                var a = a + 1;
+                console.log("troisième instruction,A=" + a);
+                var b = a - 4;
+                console.log("quatrième instruction, B=" + b);
+
+
+                document.getElementById("exo3").innerHTML = "les variables après éxécution sont A=" + a + " et B=" + b;
+            }
+        </script>
+
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_04</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Quelles seront les valeurs des variables A, B et C après exécution des instructions suivantes ?<br />Variables A,B et C en Entier<br />Début<br />A
+            &lt;--3<br />B
+                &lt;--10<br />C
+                    &lt;--A+B<br />B
+                        &lt;--A+B<br />A
+                            &lt;--C<br />Fin</p>
+        <p id="exo4" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo4Function()">Lancer</button></p>
+        <script>
+            function exo4Function() {
+                var a = 3;
+                console.log("première instruction, A=" + a);
+                var b = 10;
+                console.log("seconde instruction, B=" + b);
+                var c = a + b;
+                console.log("troisième instruction,C=" + c);
+                var b = a + b;
+                console.log("quatrième instruction, B=" + b);
+                var a = c;
+                console.log("cinquième instruction,A=" + a);
+
+                document.getElementById("exo4").innerHTML = "les variables après éxécution sont A=" + a + " et B=" + b + " et C=" + c;
+            }
+        </script>
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_05</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Quelles seront les valeurs des variables A et B après exécution des instructions suivantes ?<br />Variables A et B en Entier<br />Début<br />A
+            &lt;--5<br />B
+                &lt;--2<br />A
+                    &lt;--B<br />B
+                        &lt;--A<br />Fin</p>
+        <p id="exo5" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo5Function()">Lancer</button></p>
+        <script>
+            function exo5Function() {
+                var a, b;
+
+                a = 5;
+                console.log("première instruction, A=" + a);
+                b = 2;
+                console.log("seconde instruction, B=" + b);
+                a = b;
+                console.log("troisième instruction,A=" + a);
+                b = a;
+                console.log("quatrième instruction, B=" + b);
+
+
+                document.getElementById("exo5").innerHTML = "les variables après éxécution sont A=" + a + " et B=" + b;
+            }
+        </script>
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_06</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Plus difficile, mais c’est un classique absolu, qu’il faut absolument maîtriser : écrire un algorithme permettant d’échanger les valeurs de deux variables A et B, et ce quel que soit leur contenu préalable.<br />Variables A, B et TMP en Entier<br />Début<br />A
+            &lt;--random<br />B
+                &lt;--random<br />TMP
+                    &lt;--A<br />A
+                        &lt;--B<br />B
+                            &lt;--TMP<br />Fin</p>
+        <p id="exo6" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo6Function()">Lancer</button></p>
+        <script>
+            function exo6Function() {
+                var a, b, random, tmp;
+
+                random = Math.floor(Math.random() * 1000);
+                console.log(random);
+                a = random;
+                console.log("première instruction, A=" + a);
+                random = Math.floor(Math.random() * 1000);
+                console.log(random);
+                b = random;
+                console.log("seconde instruction, B=" + b);
+                tmp = a;
+                a = b;
+                console.log("troisième instruction,A=" + a);
+                b = tmp;
+                console.log("quatrième instruction, B=" + b);
+
+
+                document.getElementById("exo6").innerHTML = "les variables après éxécution sont A=" + a + " et B=" + b;
+            }
+        </script>
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_07</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Une variante du précédent : on dispose de trois variables A, B et C. Ecrivez un algorithme transférant à B la valeur de A, à C la valeur de B et à A la valeur de C (toujours quels que soient les contenus préalables de ces variables). <br />Variables
+            A, B, C et TMP en Entier<br />Début<br />A
+            &lt;--random<br />B
+                &lt;--random<br />C
+                    &lt;--random<br />TMP
+                        &lt;--B<br />B
+                            &lt;--A<br />A
+                                &lt;--C<br />C
+                                    &lt;--TMP<br />Fin</p>
+        <p id="exo7" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo7Function()">Lancer</button></p>
+        <script>
+            function exo7Function() {
+                var a, b, c, random, tmp;
+
+                random = Math.floor(Math.random() * 1000);
+                console.log(random);
+                a = random;
+                console.log("première instruction, A=" + a);
+                random = Math.floor(Math.random() * 1000);
+                console.log(random);
+                b = random;
+                console.log("seconde instruction, B=" + b);
+                random = Math.floor(Math.random() * 1000);
+                console.log(random);
+                c = random;
+                console.log("troisième instruction, C=" + c);
+                tmp = b;
+                b = a;
+                console.log("quatrième instruction,=B" + b);
+                a = c;
+                console.log("cinquième instruction, A=" + a);
+                c = tmp;
+                console.log("sixième instruction, C=" + c);
+
+
+                document.getElementById("exo7").innerHTML = "les variables après éxécution sont A=" + a + ", B=" + b + " et C=" + c;
+            }
+        </script>
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_08</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Que produit l’algorithme suivant ?<br />Variables A, B, C en caractères<br />Début<br />A
+            &lt;-- "423"<br />B
+                &lt;-- "12"<br />C
+                    &lt;--A+B<br />Fin</p>
+        <p id="exo8" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo8Function()">Lancer</button></p>
+        <script>
+            function exo8Function() {
+                var a, b, c;
+
+                a = "423";
+                console.log("première instruction, A=" + a);
+                b = "12";
+                console.log("seconde instruction, B=" + b);
+                c = a + b;
+                console.log("troisième instruction, C=" + c);
+
+
+                document.getElementById("exo8").innerHTML = "Après éxécution c=" + c + "<br />La concaténation se fait correctement mais on n'obtient pas le calcul désiré.<br />Ci-dessous l'écriture pour obtenir le résultat de 423+12";
+
+            }
+        </script>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">exo8 version2<br />Variables A, B en caractères, C en Int<br />Début<br />A
+            &lt;-- "423"<br />B
+                &lt;-- "12"<br />C
+                    &lt;--A+B<br />Fin</p>
+        <p id="exo8v2" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo8v2Function()">Lancer</button></p>
+        <script>
+            function exo8v2Function() {
+                var a, b, c;
+
+                //a = parseInt("423");
+                a = "423";
+                console.log("première instruction, A=" + a);
+                //b = parseInt("12");
+                b = "12";
+                console.log("seconde instruction, B=" + b);
+                c = a + b;
+                console.log("troisième instruction, C=" + c);
+
+
+                document.getElementById("exo8v2").innerHTML = "le résultat de A+B est: " + c;
+            }
+        </script>
+        <h2 style="color:#D0D3D4;font-family:prestige;font-size:40px;font-variant-caps:small-caps;text-align:center">Exo_09</h2>
+        <p style="color:#D0D3D4;font-family:prestige;font-size:25px;text-align:center">Que produit l’algorithme suivant ?<br />Variables A, B, C en caractères<br />Début<br />A
+            &lt;-- "423"<br />B
+                &lt;-- "12"<br />C
+                    &lt;--A &amp; B<br />Fin</p>
+        <p id="exo9" style="color:green;font-family:prestige;font-size:25px;text-align:center" align="center"><button type="button" style="background-color:red;font:black;" onclick="exo9Function()">Lancer</button></p>
+        <script>
+            function exo9Function() {
+                var a, b, c;
+
+                a = 423;
+                console.log("première instruction, A=" + a);
+                b = 12;
+                console.log("seconde instruction, B=" + b);
+                c = a + b;
+                //c = a & b;
+                console.log("troisième instruction, C=" + c);
+
+
+                document.getElementById("exo9").innerHTML = "Après éxécution c=" + c;
+
+            }
+        </script>
+
+
+        <div>
+            <form class="return">
+                <br/>
+                <input type="button" value="BACK" onclick="history.go(-1)">
+            </form>
+        </div>
+</body>
+
+</html>

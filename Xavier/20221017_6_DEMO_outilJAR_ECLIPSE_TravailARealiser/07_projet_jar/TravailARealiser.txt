@@ -1,0 +1,5 @@
+Utiliser Ant (et le build.xml fourni) pour construire le projet
+Utiliser Ant pour lance l'applicatif à partir des classes et à partir du JAR
+
+Ecrire un BAT pour lancer l'applicatif à partir des classes
+Ecrire un BAT pour lancer l'applicatif à partir du JAR

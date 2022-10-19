@@ -1,0 +1,74 @@
+Microsoft Windows [version 10.0.17134.407]
+(c) 2018 Microsoft Corporation. Tous droits réservés.
+
+D:\TP_DOS>cd D:\TP_JAVA\07_projet_jar
+
+D:\TP_JAVA\07_projet_jar>
+D:\TP_JAVA\07_projet_jar>java -jar demo.jar MonApp
+Error: Invalid or corrupt jarfile demo.jar
+
+D:\TP_JAVA\07_projet_jar>
+D:\TP_JAVA\07_projet_jar>java -help
+Syntaxe : java [-options] class [args...]
+           (pour l'exécution d'une classe)
+   ou  java [-options] -jar jarfile [args...]
+           (pour l'exécution d'un fichier JAR)
+où les options comprennent :
+    -d32          utilisez le modèle de données 32 bits s'il est disponible
+    -d64          utilisez le modèle de données 64 bits s'il est disponible
+    -server       pour sélectionner la machine virtuelle "server"
+                  La machine virtuelle par défaut est server.
+...
+
+D:\TP_JAVA\07_projet_jar>java -jar demo.jar MonApp
+valeur de b1 :-90  et valeur de b2 :65
+valeur de b1 :-90  et valeur de b2 :65
+valeur de b3 :101
+valeur de b3 :truevaleur de i1 :-155
+valeur du caractère c1 :f
+valeur du booléen  t1 :true
+valeur du float  f1 :5.0
+valeur du double  d1 :56789.6543983
+les valeurs sont différentes
+les valeurs sont différentes
+valeur inférieure ou égales
+c1 vaut f
+cas non prévu
+op ternaire chaine :egales
+while valeur de i:1
+while valeur de i:2
+while valeur de i:3
+while valeur de i:4
+do-while valeur de i:1
+do-while valeur de i:2
+do-while valeur de i:3
+do-while valeur de i:4
+valeur de i:1
+valeur de i:2
+valeur de i:3
+valeur de i:4
+valeur de i:5
+for valeur de i:1
+for valeur de i:2
+for valeur de i:3
+for valeur de i:4
+ma chaine :coucou
+ma chaine :coucou
+maChaine :egales
+chaine :egales
+la date courante :Tue Nov 20 10:57:02 CET 2018
+la date courante :Tue Nov 20 10:57:02 CET 2018
+valeur de s1 :12567
+le resultat de l'additionBizarre :12603
+valeur de maVar :7
+le resultat de l'addition :12601
+chaines égales
+le resultat de la soustraction :12533
+
+variable maVarClasse visible?7
+
+valeur de maVarInstance:2
+valeur de maVarInstance:6
+valeur de maVarInstance:2
+
+D:\TP_JAVA\07_projet_jar>

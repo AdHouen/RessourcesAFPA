@@ -1,0 +1,406 @@
+
+SQL*Plus: Release 18.0.0.0.0 - Production on Lun. FÚvr. 1 14:38:33 2021
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle.  All rights reserved.
+
+
+ConnectÚ Ó :
+Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production
+Version 18.4.0.0.0
+
+SQL>
+SQL> show con_name
+
+CON_NAME
+------------------------------
+CDB$ROOT
+SQL> alter session set container=xepdb1;
+
+Session modifiÚe.
+
+SQL>
+SQL> show con_name
+
+CON_NAME
+------------------------------
+XEPDB1
+SQL>
+SQL>
+SQL> create user scott2 indentified by scott2;
+create user scott2 indentified by scott2
+                   *
+ERREUR Ó la ligne 1 :
+ORA-00922: option erronÚe ou absente
+
+
+SQL> create user scott2 identified by scott2;
+
+Utilisateur crÚÚ.
+
+SQL> grant connect, resource to scott2;
+
+Autorisation de privilÞges (GRANT) acceptÚe.
+
+SQL>
+SQL> alter user scott2 quota unlimited on users;
+
+Utilisateur modifiÚ.
+
+SQL>
+SQL> connect scott2/scott2@localhost/xepdb1
+ConnectÚ.
+SQL>
+SQL> create table t1 ( c11 number(5) , c12 varchar(5));
+
+Table crÚÚe.
+
+SQL>
+SQL> select * from cat;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+T1
+TABLE
+
+
+SQL> select * from user_catalog;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+T1
+TABLE
+
+
+SQL> describe t1
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ C11                                                NUMBER(5)
+ C12                                                VARCHAR2(5)
+
+SQL> insert into t1 ( c11, c12) values (12, 'aaa');
+
+1 ligne crÚÚe.
+
+SQL>
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+
+SQL> select c11, c12 from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+
+SQL> select count(*) from t1;
+
+  COUNT(*)
+----------
+         1
+
+SQL> select max(c11) from t1;
+
+  MAX(C11)
+----------
+        12
+
+SQL> select avg(c11) from t1;
+
+  AVG(C11)
+----------
+        12
+
+SQL> select upper(c12) from t1;
+
+UPPER
+-----
+AAA
+
+SQL> insert into t1 ( c11, c12) values (7, 'bbb');
+
+1 ligne crÚÚe.
+
+SQL> select upper(c12) from t1;
+
+UPPER
+-----
+AAA
+BBB
+
+SQL> select max(c11) from t1;
+
+  MAX(C11)
+----------
+        12
+
+SQL> select avg(c11) from t1;
+
+  AVG(C11)
+----------
+       9,5
+
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 bbb
+
+SQL>
+SQL>
+SQL> update t1 set c12='ccc' where c11=7;
+
+1 ligne mise Ó jour.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 ccc
+
+SQL> insert into t1 ( c11, c12) values (3, 'xxx');
+
+1 ligne crÚÚe.
+
+SQL>
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 ccc
+         3 xxx
+
+SQL> delete t1 where c11=3;
+
+1 ligne supprimÚe.
+
+SQL> delete from t1 where c11=3;
+
+0 lignes supprimÚes.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 ccc
+
+SQL> delete t1 where c13=3;
+delete t1 where c13=3
+                *
+ERREUR Ó la ligne 1 :
+ORA-00904: "C13" : identificateur non valide
+
+
+SQL> insert into t1 ( c11, c12) values (7, 'bbb');
+
+1 ligne crÚÚe.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 ccc
+         7 bbb
+
+SQL> alter table t1 add constraint t1_pk primary key (c11);
+alter table t1 add constraint t1_pk primary key (c11)
+                              *
+ERREUR Ó la ligne 1 :
+ORA-02437: impossible de valider (SCOTT2.T1_PK) - violation de la clÚ primaire
+
+
+SQL> insert into t1 ( c11, c12) values (null, 'bbb');
+
+1 ligne crÚÚe.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 ccc
+         7 bbb
+           bbb
+
+SQL> alter table t1 add constraint t1_pk primary key (c11);
+alter table t1 add constraint t1_pk primary key (c11)
+                                                 *
+ERREUR Ó la ligne 1 :
+ORA-01449: colonne contenant des valeurs non renseignÚes (NULL) ; spÚcification
+NOT NULL impossible
+
+
+SQL> delete t1 where c12='bbb';
+
+2 lignes supprimÚes.
+
+SQL>
+SQL> alter table t1 add constraint t1_pk primary key (c11);
+
+Table modifiÚe.
+
+SQL>
+SQL>
+SQL> insert into t1 ( c11, c12) values (null, 'bbb');
+insert into t1 ( c11, c12) values (null, 'bbb')
+                                   *
+ERREUR Ó la ligne 1 :
+ORA-01400: impossible d'insÚrer NULL dans ("SCOTT2"."T1"."C11")
+
+
+SQL> insert into t1 ( c11, c12) values (7, 'bbb');
+insert into t1 ( c11, c12) values (7, 'bbb')
+*
+ERREUR Ó la ligne 1 :
+ORA-00001: violation de contrainte unique (SCOTT2.T1_PK)
+
+
+SQL>
+SQL> select * from t1;
+
+       C11 C12
+---------- -----
+        12 aaa
+         7 ccc
+
+SQL> create table t2( c21 char(4) primary key , c22 number(5));
+
+Table crÚÚe.
+
+SQL>
+SQL> insert into t2 values ( '2', 7);
+
+1 ligne crÚÚe.
+
+SQL> insert into t2 values ( '8', 7);
+
+1 ligne crÚÚe.
+
+SQL> insert into t2 values ( '11', 24);
+
+1 ligne crÚÚe.
+
+SQL>
+SQL> select * from t2;
+
+C21         C22
+---- ----------
+2             7
+8             7
+11           24
+
+SQL> alter table t2 add constraint t2_t1_FK foreign key (c22) references t1(c11);
+alter table t2 add constraint t2_t1_FK foreign key (c22) references t1(c11)
+                              *
+ERREUR Ó la ligne 1 :
+ORA-02298: impossible de valider (SCOTT2.T2_T1_FK) - clÚs parents introuvables
+
+
+SQL>
+SQL> delete t2 where c21='11';
+
+1 ligne supprimÚe.
+
+SQL>
+SQL> alter table t2 add constraint t2_t1_FK foreign key (c22) references t1(c11);
+
+Table modifiÚe.
+
+SQL>
+SQL> insert into t2 values ( '11', 24);
+insert into t2 values ( '11', 24)
+*
+ERREUR Ó la ligne 1 :
+ORA-02291: violation de contrainte d'intÚgritÚ (SCOTT2.T2_T1_FK) - clÚ parent
+introuvable
+
+
+SQL> create table t3 as select * from t2;
+
+Table crÚÚe.
+
+SQL>
+SQL> select * from cat;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+T1
+TABLE
+
+T2
+TABLE
+
+T3
+TABLE
+
+
+SQL> desc t3;
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ C21                                                CHAR(4)
+ C22                                                NUMBER(5)
+
+SQL> select * from t3;
+
+C21         C22
+---- ----------
+2             7
+8             7
+
+SQL> create table t4 as select * from t2 where 1=0;
+
+Table crÚÚe.
+
+SQL>
+SQL> select * from t4;
+
+aucune ligne sÚlectionnÚe
+
+SQL> desc t4
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ C21                                                CHAR(4)
+ C22                                                NUMBER(5)
+
+SQL> insert into t4 select * from t2;
+
+2 lignes crÚÚes.
+
+SQL> select * from t4;
+
+C21         C22
+---- ----------
+2             7
+8             7
+
+
+SQL> rollback;
+
+Annulation (rollback) effectuÚe.
+
+SQL> select * from t4;
+
+aucune ligne sÚlectionnÚe
+
+SQL>
+SQL> select * from t3;
+
+C21         C22
+---- ----------
+2             7
+8             7
+
+SQL>

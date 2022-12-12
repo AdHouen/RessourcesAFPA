@@ -1,0 +1,6 @@
+Oracle Database Usage Information
+
+La doc Oracle sur les bases est
+sqldeveloper_help/supp_info_oracle.htm
+
+peut être mis dans un document word

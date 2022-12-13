@@ -1,0 +1,236 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Lun. DÚc. 12 15:16:34 2022
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ERROR:
+ORA-28002: le mot de passe expirera dans 7 jours
+
+Heure de la derniÞre connexion rÚussie : Lun. DÚc.  12 2022 14:09:51 +01:00
+ConnectÚ Ó :
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select * from cat;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+EMPMAN
+VIEW
+
+SQL> select * from user_catalog;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+EMPMAN
+VIEW
+
+SQL> create table t1 ( c11 number(5), c12 varchar2(8));
+
+Table crÚÚe.
+SQL> drop table t1;
+
+Table supprimÚe.
+
+SQL> create table t1 ( c11 number(5), c12 varchar2(8));
+
+Table crÚÚe.
+SQL> alter table t1 add  (c13 integer);
+
+Table modifiÚe.
+SQL> describe t1
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ C11                                                NUMBER(5)
+ C12                                                VARCHAR2(8)
+ C13                                                NUMBER(38)
+
+SQL> drop table t1;
+Table supprimÚe.
+
+SQL> create table t1 ( c11 decimal(5), c12 varchar(8));
+Table crÚÚe.
+
+SQL> insert into t1 values(12,'aaa');
+
+1 ligne crÚÚe.
+
+SQL> insert into t1 values(7,'ccc');
+
+1 ligne crÚÚe.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- --------
+        12 aaa
+         7 ccc
+
+SQL> show user
+USER est "SCOTT"
+SQL> commit;
+
+Validation effectuÚe.
+
+SQL> update t1 set c11=C11+4 ;
+
+2 lignes mises Ó jour.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- --------
+        16 aaa
+        11 ccc
+
+SQL> rollback;
+
+Annulation (rollback) effectuÚe.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- --------
+        12 aaa
+         7 ccc
+
+SQL> update t1 set c11=C11+4 where c12='ccc';
+
+1 ligne mise Ó jour.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- --------
+        12 aaa
+        11 ccc
+
+SQL> delete t1 where c11=12;
+
+1 ligne supprimÚe.
+
+SQL> rollback;
+
+Annulation (rollback) effectuÚe.
+
+SQL> select * from t1 where c12='ccc';
+
+       C11 C12
+---------- --------
+         7 ccc
+
+SQL> select c11, c11*5 from t1 where c12='ccc';
+
+       C11      C11*5
+---------- ----------
+         7         35
+
+SQL> select * from cat;
+
+...
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+T1
+TABLE
+
+SQL> alter table T1 add constraint pk_t1 primary key (c11);
+
+Table modifiÚe.
+
+SQL> select * from t1;
+
+       C11 C12
+---------- --------
+        12 aaa
+         7 ccc
+
+SQL> insert into t1 values(7,'uuu');
+insert into t1 values(7,'uuu')
+*
+ERREUR Ó la ligne 1 :
+ORA-00001: violation de contrainte unique (SCOTT.PK_T1)
+
+SQL> create table t2 ( c21 varchar(4),c22 decimal(5));
+
+Table crÚÚe.
+
+SQL> insert into t2 values('ee',7);
+
+1 ligne crÚÚe.
+
+SQL> insert into t2 values('ee',8);
+
+1 ligne crÚÚe.
+
+SQL> alter table t2 add constraint FK_T2_T1 foreign key (c22) references T1(C11);
+alter table t2 add constraint FK_T2_T1 foreign key (c22) references T1(C11)
+                              *
+ERREUR Ó la ligne 1 :
+ORA-02298: impossible de valider (SCOTT.FK_T2_T1) - clÚs parents introuvables
+
+SQL> delete t2 where c22=8;
+1 ligne supprimÚe.
+
+SQL> alter table t2 add constraint FK_T2_T1 foreign key (c22) references T1(C11);
+
+Table modifiÚe.
+
+SQL> insert into t2 values('ff',11);
+insert into t2 values('ff',11)
+*
+ERREUR Ó la ligne 1 :
+ORA-02291: violation de contrainte d'intÚgritÚ (SCOTT.FK_T2_T1) - clÚ parent
+introuvable
+
+SQL> create table t3 as select * from t1;
+Table crÚÚe.
+
+SQL> insert into t3 select * from t1 ;
+
+2 lignes crÚÚes.
+
+SQL> select * from t3;
+
+       C11 C12
+---------- --------
+        12 aaa
+         7 ccc
+        12 aaa
+         7 ccc
+		 
+SQL> show all
+...
+SQL> host
+...
+=================
+Dansle schéma HR
+
+select * from employees;
+desc employees
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER(6)
+ FIRST_NAME                                         VARCHAR2(20)
+ LAST_NAME                                 NOT NULL VARCHAR2(25)
+ EMAIL                                     NOT NULL VARCHAR2(25)
+ PHONE_NUMBER                                       VARCHAR2(20)
+ HIRE_DATE                                 NOT NULL DATE
+ JOB_ID                                    NOT NULL VARCHAR2(10)
+ SALARY                                             NUMBER(8,2)
+ COMMISSION_PCT                                     NUMBER(2,2)
+ MANAGER_ID                                         NUMBER(6)
+ DEPARTMENT_ID                                      NUMBER(4)
+
+SQL> select employee_id, first_name from employees;
+
+EMPLOYEE_ID FIRST_NAME
+----------- --------------------
+        174 Ellen
+        166 Sundar

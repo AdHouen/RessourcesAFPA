@@ -1,0 +1,250 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mer. DÚc. 14 09:11:22 2022
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+Heure de la derniÞre connexion rÚussie : Mer. DÚc.  14 2022 09:10:29 +01:00
+
+ConnectÚ Ó :
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> select * from cat;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+CLIENT
+TABLE
+
+COMPTE
+TABLE
+
+PRET
+TABLE
+
+
+SQL> desc client
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ NOCLIENT                                  NOT NULL NUMBER(38)
+ NOMCLIENT                                          VARCHAR2(18)
+ ADRESSECLIENT                                      VARCHAR2(20)
+ NOTELEPHONE                                        VARCHAR2(15)
+
+SQL> select noclient, nomclient from client;
+
+  NOCLIENT NOMCLIENT
+---------- ------------------
+        10 Luc Sansom
+        20 Dollard Tremblay
+        30 Lin B¶
+
+SQL> host
+Microsoft Windows [version 10.0.19044.2251]
+(c) Microsoft Corporation. Tous droits réservés.
+
+E:\40_ETUDE_SQL_PLSQL\662_BANQUE_ODIN_Intro_DMLDDL\oracle_fourni>dir
+ Le volume dans le lecteur E s’appelle ETUDE
+ Le numéro de série du volume est 62C7-E245
+
+ Répertoire de E:\40_ETUDE_SQL_PLSQL\662_BANQUE_ODIN_Intro_DMLDDL\oracle_fourni
+
+06/02/2020  11:04    <DIR>          .
+06/02/2020  11:04    <DIR>          ..
+03/02/2020  23:55               800 drop.bat
+24/02/2022  10:51               766 drop_banque.sql
+03/02/2020  23:53               824 go.bat
+07/02/2022  11:05            11 284 go.log
+12/02/2020  11:11             1 141 go.sql
+24/02/2022  10:49             2 084 install_banque.sql
+24/02/2022  11:05             1 110 install_data_banque.sql
+10/09/2007  13:48               146 login.sql
+               8 fichier(s)           18 155 octets
+               2 Rép(s)  155 259 781 120 octets libres
+
+E:\40_ETUDE_SQL_PLSQL\662_BANQUE_ODIN_Intro_DMLDDL\oracle_fourni>exit
+
+SQL> start drop_banque
+****************************************
+SUPPRESSION DES TABLES, VUES , SEQUENCES
+****************************************
+
+Table supprimÚe.
+
+
+Table supprimÚe.
+
+
+Table supprimÚe.
+
+
+Corbeille purgÚe.
+
+
+*******************************************
+INTERROGATION DU DICTIONNAIRE
+Reste-t-il des tables, vues, sequences ?
+*******************************************
+
+aucune ligne sÚlectionnÚe
+
+SQL> @install_banque
+
+Table crÚÚe.
+
+
+Table crÚÚe.
+
+
+Table crÚÚe.
+
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+CLIENT
+COMPTE
+PRET
+
+
+aucune ligne sÚlectionnÚe
+
+
+
+
+******************************
+INTERROGATION DU DICTIONNAIRE
+Recapitulatif des Objets crÚÚs
+******************************
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+CLIENT
+TABLE
+
+COMPTE
+TABLE
+
+PRET
+TABLE
+
+
+
+
+
+************************************
+INTERROGATION DU DICTIONNAIRE
+Recapitulatif des contraintes posÚes
+************************************
+
+CONSTRAINT_NAME      TYP TABLE_NAME      SEARCH_CONDITION
+-------------------- --- --------------- ------------------------------
+DELETE_RU STATUS
+--------- --------
+SYS_C008692          C   COMPTE          solde >= 0
+          ENABLED
+
+-------------------- ***
+
+
+                   1 cou
+
+
+
+CONSTRAINT_NAME      TYP TABLE_NAME      SEARCH_CONDITION
+-------------------- --- --------------- ------------------------------
+DELETE_RU STATUS
+--------- --------
+SYS_C008691          P   CLIENT
+          ENABLED
+
+SYS_C008693              COMPTE
+          ENABLED
+
+SYS_C008695              PRET
+          ENABLED
+
+
+CONSTRAINT_NAME      TYP TABLE_NAME      SEARCH_CONDITION
+-------------------- --- --------------- ------------------------------
+DELETE_RU STATUS
+--------- --------
+-------------------- ***
+
+
+                   3 cou
+
+
+SYS_C008694          R   COMPTE
+NO ACTION ENABLED
+
+
+CONSTRAINT_NAME      TYP TABLE_NAME      SEARCH_CONDITION
+-------------------- --- --------------- ------------------------------
+DELETE_RU STATUS
+--------- --------
+SYS_C008696          R   PRET
+NO ACTION ENABLED
+
+-------------------- ***
+
+
+                   2 cou
+
+6 lignes sÚlectionnÚes.
+
+
+SQL> @install_data_banque
+
+0 lignes supprimÚes.
+
+
+0 lignes supprimÚes.
+
+
+0 lignes supprimÚes.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+Session modifiÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+1 ligne crÚÚe.
+
+
+Validation effectuÚe.
+
+SQL>

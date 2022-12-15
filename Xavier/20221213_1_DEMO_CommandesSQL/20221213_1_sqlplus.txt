@@ -1,0 +1,79 @@
+
+SQL*Plus: Release 21.0.0.0.0 - Production on Mar. DÚc. 13 08:43:35 2022
+Version 21.3.0.0.0
+
+Copyright (c) 1982, 2021, Oracle.  All rights reserved.
+
+ConnectÚ Ó :
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> host
+Microsoft Windows [version 10.0.19044.2251]
+(c) Microsoft Corporation. Tous droits réservés.
+
+E:\40_ETUDE_SQL_PLSQL\663_SCOTT_PERS1_PERS2_DMLDDL\oracle_transmis>dir
+ Le volume dans le lecteur E s’appelle ETUDE
+ Le numéro de série du volume est 62C7-E245
+
+ Répertoire de E:\40_ETUDE_SQL_PLSQL\663_SCOTT_PERS1_PERS2_DMLDDL\oracle_transmis
+
+08/02/2022  18:28    <DIR>          .
+08/02/2022  18:28    <DIR>          ..
+...
+E:\40_ETUDE_SQL_PLSQL\663_SCOTT_PERS1_PERS2_DMLDDL\oracle_transmis>exit
+
+SQL> show all
+appinfo est OFF et dÚfini en "SQL*Plus"
+arraysize 15
+...
+SQL> set pagesize 25
+SQL> show pagesize
+pagesize 25
+SQL> select * from cat;
+
+TABLE_NAME
+--------------------------------------------------------------------------------
+TABLE_TYPE
+-----------
+T2
+TABLE
+T1
+TABLE
+T3
+TABLE
+
+SQL> desc t2
+ Nom                                       NULL ?   Type
+ ----------------------------------------- -------- ----------------------------
+ C21                                                VARCHAR2(4)
+ C22                                                NUMBER(5)
+
+SQL> select * from t2;
+
+C21         C22
+---- ----------
+ee            7
+
+SQL> insert into t2 (c21,c22) values( null, 12);
+
+1 ligne crÚÚe.
+
+SQL> select * from t2;
+
+C21         C22
+---- ----------
+             12
+ee            7
+
+SQL> delete t1 where c12='aaa';
+delete t1 where c12='aaa'
+*
+ERREUR Ó la ligne 1 :
+ORA-02292: violation de contrainte (SCOTT.FK_T2_T1) d'intÚgritÚ -
+enregistrement fils existant
+
+SQL> purge recyclebin;
+Corbeille purgÚe.
+
+SQL>

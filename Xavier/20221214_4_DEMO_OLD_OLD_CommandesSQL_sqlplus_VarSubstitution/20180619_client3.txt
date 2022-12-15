@@ -1,0 +1,176 @@
+connexion sous schéma scott
+---------------------------
+SQL*Plus: Release 10.2.0.1.0 - Production on Jeu. Juin 19 09:14:31 2014
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+ConnectÚ Ó :
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Production
+
+SCOTT> select * from cat;
+
+TABLE_NAME                     TABLE_TYPE
+------------------------------ -----------
+PRODUIT                        TABLE
+COMMANDE                       TABLE
+T1                             TABLE
+
+SCOTT>
+SCOTT> show linesize
+linesize 120
+SCOTT> set linesize 200
+SCOTT>
+SCOTT> show pagesize
+pagesize 66
+SCOTT> set pagesize 200
+
+SCOTT> select * from produit;
+
+ NOPRODUIT LIBELLE                                                  PRIX
+---------- -------------------------------------------------- ----------
+         6 agendas                                                    10
+        56 cahier                                                   3,77
+        12 gomme                                                     2,7
+
+SCOTT> column libelle format a9
+SCOTT> select * from produit;
+
+ NOPRODUIT LIBELLE         PRIX
+---------- --------- ----------
+         6 agendas           10
+        56 cahier          3,77
+        12 gomme            2,7
+
+SCOTT> list
+  1* select * from produit
+SCOTT> select * from produit
+  2  where prix>5;
+
+ NOPRODUIT LIBELLE         PRIX
+---------- --------- ----------
+         6 agendas           10
+
+SCOTT>
+SCOTT> /
+
+ NOPRODUIT LIBELLE         PRIX
+---------- --------- ----------
+         6 agendas           10
+
+SCOTT> run
+  1  select * from produit
+  2* where prix>5
+
+ NOPRODUIT LIBELLE         PRIX
+---------- --------- ----------
+         6 agendas           10
+
+SCOTT> /
+
+ NOPRODUIT LIBELLE         PRIX
+---------- --------- ----------
+         6 agendas           10
+
+SCOTT> ;
+  1  select * from produit
+  2* where prix>5
+SCOTT> l
+  1  select * from produit
+  2* where prix>5
+SCOTT> help index
+
+Enter Help [topic] for help.
+
+ @             COPY         PAUSE                    SHUTDOWN
+ @@            DEFINE       PRINT                    SPOOL
+ /             DEL          PROMPT                   SQLPLUS
+ ACCEPT        DESCRIBE     QUIT                     START
+ APPEND        DISCONNECT   RECOVER                  STARTUP
+ ARCHIVE LOG   EDIT         REMARK                   STORE
+ ATTRIBUTE     EXECUTE      REPFOOTER                TIMING
+ BREAK         EXIT         REPHEADER                TTITLE
+ BTITLE        GET          RESERVED WORDS (SQL)     UNDEFINE
+ CHANGE        HELP         RESERVED WORDS (PL/SQL)  VARIABLE
+ CLEAR         HOST         RUN                      WHENEVER OSERROR
+ COLUMN        INPUT        SAVE                     WHENEVER SQLERROR
+ COMPUTE       LIST         SET                      XQUERY
+ CONNECT       PASSWORD     SHOW
+
+
+SCOTT> define var1=4
+SCOTT>
+SCOTT> select * from t1 where c2> &var1;
+ancien   1 : select * from t1 where c2> &var1
+nouveau   1 : select * from t1 where c2> 4
+select * from t1 where c2> 4
+                       *
+ERREUR Ó la ligne 1 :
+ORA-01722: Nombre non valide
+
+
+SCOTT> define
+DEFINE _DATE           = "19/06/14" (CHAR)
+DEFINE _CONNECT_IDENTIFIER = "XE" (CHAR)
+DEFINE _USER           = "SCOTT" (CHAR)
+DEFINE _PRIVILEGE      = "" (CHAR)
+DEFINE _SQLPLUS_RELEASE = "1002000100" (CHAR)
+DEFINE _EDITOR         = "Notepad" (CHAR)
+DEFINE _O_VERSION      = "Oracle Database 10g Express Edition Release 10.2.0.1.0
+ - Production" (CHAR)
+DEFINE _O_RELEASE      = "1002000100" (CHAR)
+DEFINE VAR1            = "4" (CHAR)
+SCOTT> help index
+
+Enter Help [topic] for help.
+
+ @             COPY         PAUSE                    SHUTDOWN
+ @@            DEFINE       PRINT                    SPOOL
+ /             DEL          PROMPT                   SQLPLUS
+ ACCEPT        DESCRIBE     QUIT                     START
+ APPEND        DISCONNECT   RECOVER                  STARTUP
+ ARCHIVE LOG   EDIT         REMARK                   STORE
+ ATTRIBUTE     EXECUTE      REPFOOTER                TIMING
+ BREAK         EXIT         REPHEADER                TTITLE
+ BTITLE        GET          RESERVED WORDS (SQL)     UNDEFINE
+ CHANGE        HELP         RESERVED WORDS (PL/SQL)  VARIABLE
+ CLEAR         HOST         RUN                      WHENEVER OSERROR
+ COLUMN        INPUT        SAVE                     WHENEVER SQLERROR
+ COMPUTE       LIST         SET                      XQUERY
+ CONNECT       PASSWORD     SHOW
+
+
+SCOTT>
+SCOTT> help prompt
+
+ PROMPT
+ ------
+
+ Sends the specified message or a blank line to the user's screen.
+
+ PRO[MPT] [text]
+
+
+SCOTT> help define
+
+ DEFINE
+ ------
+
+ Specifies a substitution variable and assigns a CHAR value to it, or
+ lists the value and variable type of a single variable or all variables.
+
+ DEF[INE] [variable] | [variable = text]
+
+SCOTT> help accept
+
+ ACCEPT
+ ------
+
+ Reads a line of input and stores it in a given substitution variable.
+ In iSQL*Plus, displays the Input Required screen for you to enter a
+ value for the substitution variable.
+
+ ACC[EPT] variable [NUM[BER] | CHAR | DATE | BINARY_FLOAT | BINARY_DOUBLE]
+ [FOR[MAT] format] [DEF[AULT] default] [PROMPT text | NOPR[OMPT]] [HIDE]
+
+SCOTT>

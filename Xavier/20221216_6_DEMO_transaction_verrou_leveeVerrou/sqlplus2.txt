@@ -1,0 +1,61 @@
+
+SQL*Plus: Release 18.0.0.0.0 - Production on Lun. FÚvr. 8 10:40:50 2021
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle.  All rights reserved.
+
+Heure de la derniÞre connexion rÚussie : Lun. FÚvr. 08 2021 10:31:51 +01:00
+
+ConnectÚ Ó :
+Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production
+Version 18.4.0.0.0
+
+SQL> select * from compte;
+
+  NOCOMPTE      SOLDE DATEOUVE   NOCLIENT
+---------- ---------- -------- ----------
+       100       1000 05/05/99         10
+       200       2000 10/10/99         20
+       300       1000 10/10/99         10
+       400          5 20/07/00         30
+       600         10 15/10/00         30
+
+SQL> select * from compte;
+
+  NOCOMPTE      SOLDE DATEOUVE   NOCLIENT
+---------- ---------- -------- ----------
+       100       1000 05/05/99         10
+       200       2000 10/10/99         20
+       300       1000 10/10/99         10
+       400          5 20/07/00         30
+       600         10 15/10/00         30
+
+SQL> update compte set solde=1700 where nocompte<150;
+
+1 ligne mise Ó jour.
+
+SQL> select * from compte;
+
+  NOCOMPTE      SOLDE DATEOUVE   NOCLIENT
+---------- ---------- -------- ----------
+       100       1700 05/05/99         10
+       200       2000 10/10/99         20
+       300       1000 10/10/99         10
+       400          5 20/07/00         30
+       600         10 15/10/00         30
+
+SQL> rollback;
+
+Annulation (rollback) effectuÚe.
+
+SQL> select * from compte;
+
+  NOCOMPTE      SOLDE DATEOUVE   NOCLIENT
+---------- ---------- -------- ----------
+       100       1100 05/05/99         10
+       200       2000 10/10/99         20
+       300       1000 10/10/99         10
+       400          5 20/07/00         30
+       600         10 15/10/00         30
+
+SQL>
